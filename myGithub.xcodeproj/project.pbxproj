@@ -38,15 +38,12 @@
 		D8E81A9F1E3BA43E0098EC6B /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A531E3B95AB0098EC6B /* RxTest.framework */; };
 		D8E81AA01E3BA46F0098EC6B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A351E3B95AB0098EC6B /* Alamofire.framework */; };
 		D8E81AA11E3BA46F0098EC6B /* IGListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A3D1E3B95AB0098EC6B /* IGListKit.framework */; };
-		D8E81AA21E3BA46F0098EC6B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A411E3B95AB0098EC6B /* Nimble.framework */; };
-		D8E81AA31E3BA46F0098EC6B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A431E3B95AB0098EC6B /* Quick.framework */; };
 		D8E81AA41E3BA46F0098EC6B /* ReactiveMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A451E3B95AB0098EC6B /* ReactiveMoya.framework */; };
 		D8E81AA51E3BA46F0098EC6B /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A471E3B95AB0098EC6B /* ReactiveSwift.framework */; };
 		D8E81AA61E3BA46F0098EC6B /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A4B1E3B95AB0098EC6B /* RxBlocking.framework */; };
 		D8E81AA71E3BA46F0098EC6B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A4D1E3B95AB0098EC6B /* RxCocoa.framework */; };
 		D8E81AA81E3BA46F0098EC6B /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A4F1E3B95AB0098EC6B /* RxMoya.framework */; };
 		D8E81AA91E3BA46F0098EC6B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A511E3B95AB0098EC6B /* RxSwift.framework */; };
-		D8E81AAA1E3BA46F0098EC6B /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A531E3B95AB0098EC6B /* RxTest.framework */; };
 		D8E81AAC1E3BBD590098EC6B /* RepositoriesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E81AAB1E3BBD590098EC6B /* RepositoriesLoader.swift */; };
 		D8E81AAD1E3BBD590098EC6B /* RepositoriesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E81AAB1E3BBD590098EC6B /* RepositoriesLoader.swift */; };
 /* End PBXBuildFile section */
@@ -187,8 +184,6 @@
 				D8E81AA01E3BA46F0098EC6B /* Alamofire.framework in Frameworks */,
 				D8E81AA11E3BA46F0098EC6B /* IGListKit.framework in Frameworks */,
 				D8E81A8F1E3BA3CE0098EC6B /* Moya.framework in Frameworks */,
-				D8E81AA21E3BA46F0098EC6B /* Nimble.framework in Frameworks */,
-				D8E81AA31E3BA46F0098EC6B /* Quick.framework in Frameworks */,
 				D8E81AA41E3BA46F0098EC6B /* ReactiveMoya.framework in Frameworks */,
 				D8E81AA51E3BA46F0098EC6B /* ReactiveSwift.framework in Frameworks */,
 				D8E81A921E3BA4020098EC6B /* Result.framework in Frameworks */,
@@ -196,7 +191,6 @@
 				D8E81AA71E3BA46F0098EC6B /* RxCocoa.framework in Frameworks */,
 				D8E81AA81E3BA46F0098EC6B /* RxMoya.framework in Frameworks */,
 				D8E81AA91E3BA46F0098EC6B /* RxSwift.framework in Frameworks */,
-				D8E81AAA1E3BA46F0098EC6B /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,8 +509,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/IGListKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveMoya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
@@ -524,7 +516,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
 			);
 			name = "Carthage Build Script";
 			outputPaths = (
