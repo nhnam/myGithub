@@ -8,31 +8,51 @@
 
 import UIKit
 import Moya
+import IGListKit
 
 class ViewController: UIViewController {
 
+    let loader = RepositoriesLoader()
+    let collectionView: IGListCollectionView = {
+       let view = IGListCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        return view
+    }()
+    
+    lazy var adapter: IGListAdapter = {
+       return IGListAdapter(updater: IGListAdapterUpdater(), viewController: self, workingRangeSize: 0)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        ApiProvider.request(Api.userRepositories("nhnam")) { (result) in
-            switch result {
-            case let .success(response):
-                do {
-                    let json =  try response.mapJSON() as? Array<Any>
-                    print(json?.count)
-                } catch {
-                    
-                }
-                break
-            case let .failure(error):
-                guard let errorMessage = error as? CustomDebugStringConvertible else {
-                    return
-                }
-                print(errorMessage)
-                break
-            }
+        self.title = "Nam's Github"
+        
+        view.addSubview(collectionView)
+        adapter.collectionView = collectionView
+        adapter.dataSource = self
+        loader.loadRepos { [weak self] in
+            self?.adapter.reloadData(completion: { (done:Bool) in
+                
+            })
         }
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        collectionView.frame = view.bounds
+    }
+}
 
+extension ViewController: IGListAdapterDataSource {
+    func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
+        return loader.repositories
+    }
+    
+    func emptyView(for listAdapter: IGListAdapter) -> UIView? {
+        return nil
+    }
+    
+    func listAdapter(_ listAdapter: IGListAdapter, sectionControllerFor object: Any) -> IGListSectionController {
+        return RepoSectionController()
+    }
 }
 

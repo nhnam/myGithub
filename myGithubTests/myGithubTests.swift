@@ -8,6 +8,7 @@
 
 import Quick
 import Nimble
+import IGListKit
 
 class ApiSpec:QuickSpec {
     override func spec() {
@@ -33,6 +34,30 @@ class ApiSpec:QuickSpec {
                         done()
                     }
                 })
+            }
+        }
+        describe("Repositories ViewController") {
+            let sut = ViewController()
+            
+            it("should has collectionView") {
+                let _ = sut.view
+                expect(sut.collectionView).toNot(beNil())
+            }
+            it("should has adapter") {
+                let _ = sut.view
+                expect(sut.adapter).toNot(beNil())
+            }
+            it("should has adapter with datasource is set") {
+                let _ = sut.view
+                expect(sut.adapter.dataSource).toNot(beNil())
+            }
+            
+        }
+        describe("RepositoriesLoader") {
+            let loader = RepositoriesLoader()
+            
+            it("should has list repositories") {
+                expect(loader.repositories).toNot(beNil())
             }
         }
     }

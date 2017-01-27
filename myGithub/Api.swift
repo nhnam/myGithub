@@ -72,3 +72,26 @@ extension Api: TargetType{
         }
     }
 }
+
+public protocol Unwrappable {
+    func unwrap() -> Any?
+}
+
+extension Optional: Unwrappable {
+    public func unwrap() -> Any? {
+        switch self {
+        case .none:
+            return nil
+        case .some(let unwrappable as Unwrappable):
+            return unwrappable.unwrap()
+        case .some (let some):
+            return some
+        }
+    }
+}
+
+public extension String {
+    init(stringInterpolationSegment expr: Unwrappable) {
+        self = String(describing: expr.unwrap() ?? "")
+    }
+}
