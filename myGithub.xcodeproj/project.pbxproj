@@ -29,18 +29,8 @@
 		D8E81A8F1E3BA3CE0098EC6B /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A3F1E3B95AB0098EC6B /* Moya.framework */; };
 		D8E81A901E3BA3CE0098EC6B /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A3F1E3B95AB0098EC6B /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8E81A921E3BA4020098EC6B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A491E3B95AB0098EC6B /* Result.framework */; };
-		D8E81A931E3BA43E0098EC6B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A351E3B95AB0098EC6B /* Alamofire.framework */; };
-		D8E81A941E3BA43E0098EC6B /* IGListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A3D1E3B95AB0098EC6B /* IGListKit.framework */; };
-		D8E81A951E3BA43E0098EC6B /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A3F1E3B95AB0098EC6B /* Moya.framework */; };
 		D8E81A961E3BA43E0098EC6B /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A411E3B95AB0098EC6B /* Nimble.framework */; };
 		D8E81A971E3BA43E0098EC6B /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A431E3B95AB0098EC6B /* Quick.framework */; };
-		D8E81A981E3BA43E0098EC6B /* ReactiveMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A451E3B95AB0098EC6B /* ReactiveMoya.framework */; };
-		D8E81A991E3BA43E0098EC6B /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A471E3B95AB0098EC6B /* ReactiveSwift.framework */; };
-		D8E81A9A1E3BA43E0098EC6B /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A491E3B95AB0098EC6B /* Result.framework */; };
-		D8E81A9B1E3BA43E0098EC6B /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A4B1E3B95AB0098EC6B /* RxBlocking.framework */; };
-		D8E81A9C1E3BA43E0098EC6B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A4D1E3B95AB0098EC6B /* RxCocoa.framework */; };
-		D8E81A9D1E3BA43E0098EC6B /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A4F1E3B95AB0098EC6B /* RxMoya.framework */; };
-		D8E81A9E1E3BA43E0098EC6B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A511E3B95AB0098EC6B /* RxSwift.framework */; };
 		D8E81A9F1E3BA43E0098EC6B /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A531E3B95AB0098EC6B /* RxTest.framework */; };
 		D8E81AA01E3BA46F0098EC6B /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A351E3B95AB0098EC6B /* Alamofire.framework */; };
 		D8E81AA11E3BA46F0098EC6B /* IGListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A3D1E3B95AB0098EC6B /* IGListKit.framework */; };
@@ -190,18 +180,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8E81A931E3BA43E0098EC6B /* Alamofire.framework in Frameworks */,
-				D8E81A941E3BA43E0098EC6B /* IGListKit.framework in Frameworks */,
-				D8E81A951E3BA43E0098EC6B /* Moya.framework in Frameworks */,
 				D8E81A961E3BA43E0098EC6B /* Nimble.framework in Frameworks */,
 				D8E81A971E3BA43E0098EC6B /* Quick.framework in Frameworks */,
-				D8E81A981E3BA43E0098EC6B /* ReactiveMoya.framework in Frameworks */,
-				D8E81A991E3BA43E0098EC6B /* ReactiveSwift.framework in Frameworks */,
-				D8E81A9A1E3BA43E0098EC6B /* Result.framework in Frameworks */,
-				D8E81A9B1E3BA43E0098EC6B /* RxBlocking.framework in Frameworks */,
-				D8E81A9C1E3BA43E0098EC6B /* RxCocoa.framework in Frameworks */,
-				D8E81A9D1E3BA43E0098EC6B /* RxMoya.framework in Frameworks */,
-				D8E81A9E1E3BA43E0098EC6B /* RxSwift.framework in Frameworks */,
 				D8E81A9F1E3BA43E0098EC6B /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +360,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8E81A081E3B63DB0098EC6B /* Build configuration list for PBXNativeTarget "myGithub" */;
 			buildPhases = (
+				D83A92F11E3C5F1A00592A19 /* Increase Build # */,
 				D8E819F21E3B63DB0098EC6B /* Sources */,
 				D8E81A0D1E3B6D310098EC6B /* Carthage Build Script */,
 				D8E819F31E3B63DB0098EC6B /* Frameworks */,
@@ -491,6 +472,20 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run fca76e678efeaf8682df31226be43eda4cd3d279 fdd093e0d2f3ce9adbae6f4f047ddf06f5f7cca4c997581f3886cc698f129c39";
 		};
+		D83A92F11E3C5F1A00592A19 /* Increase Build # */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increase Build #";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"\n";
+		};
 		D8E81A0D1E3B6D310098EC6B /* Carthage Build Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -600,8 +595,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -619,6 +613,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -650,7 +645,6 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -663,6 +657,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(PROJECT_DIR)/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -721,7 +716,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = myGithubTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.namnh.myGithubTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -739,7 +734,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = myGithubTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.namnh.myGithubTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
