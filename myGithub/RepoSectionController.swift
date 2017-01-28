@@ -32,10 +32,8 @@ extension RepoSectionController: IGListSectionType {
     func cellForItem(at index: Int) -> UICollectionViewCell {
         let cell = collectionContext!.dequeueReusableCell(of: RepositoryCell.self, for: self, at: index)
         if let cell = cell as? RepositoryCell {
-            cell.nameLabel.text = repository.name
-            cell.linkLabel.text = repository.url
+            cell.config(repository: repository)
         }
-        print(repository.name)
         return cell
     }
     
@@ -44,6 +42,9 @@ extension RepoSectionController: IGListSectionType {
     }
     
     func didSelectItem(at index: Int) {
-        //
+        print("Selected \(repository.name)")
+        let viewController = FastViewController()
+        //viewController.view.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+        self.viewController?.navigationController?.pushViewController(viewController, animated: true)
     }
 }

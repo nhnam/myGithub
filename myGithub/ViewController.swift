@@ -48,7 +48,7 @@ extension ViewController: IGListAdapterDataSource {
     }
     
     func emptyView(for listAdapter: IGListAdapter) -> UIView? {
-        return nil
+        return EmptyView()
     }
     
     func listAdapter(_ listAdapter: IGListAdapter, sectionControllerFor object: Any) -> IGListSectionController {

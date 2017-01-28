@@ -9,8 +9,8 @@
 import UIKit
 
 class RepositoryCell: UICollectionViewCell {
-    static let topInset = UIEdgeInsets(top: 0, left: 15, bottom: 20, right: 15)
-    static let bottomInset = UIEdgeInsets(top: 20, left: 15, bottom: 0, right: 15)
+    static let topInset = UIEdgeInsets(top: 0, left: 20, bottom: 20, right: 15)
+    static let bottomInset = UIEdgeInsets(top: 20, left: 25, bottom: 0, right: 15)
     
     let nameLabel: UILabel = {
         let label = UILabel()
@@ -43,5 +43,10 @@ class RepositoryCell: UICollectionViewCell {
         super.layoutSubviews()
         nameLabel.frame = UIEdgeInsetsInsetRect(bounds, RepositoryCell.topInset)
         linkLabel.frame = UIEdgeInsetsInsetRect(bounds, RepositoryCell.bottomInset)
+    }
+    
+    func config(repository repositoryObject: Repository) {
+        self.nameLabel.text = repositoryObject.name
+        self.linkLabel.text = repositoryObject.url
     }
 }
