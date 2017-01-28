@@ -9,7 +9,9 @@ platform :ios do
   lane :beta do |values|
     # Fabric generated this lane for deployment to Crashlytics Beta
     # set 'export_method' to 'ad-hoc' if your Crashlytics Beta distribution uses ad-hoc provisioning
-    gym(scheme: 'myGithub', export_method: 'development')
+    cert(username:"xichlong2020@gmail.com", development: true)
+    sigh(username:"xichlong2020@gmail.com", app_identifier:"com.namnh.myGithub",  development: true)
+    gym(scheme: 'myGithub', export_method: 'development', use_legacy_build_api:true)
 
     emails = values[:test_email] ? values[:test_email] : ['nhnam.develop@gmail.com'] # You can list more emails here
     groups = values[:test_email] ? nil : nil # You can define groups on the web and reference them here
