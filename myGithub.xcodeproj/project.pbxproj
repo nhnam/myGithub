@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D80DEAFA1E3CBAFF0020A935 /* Optimizely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80DEAF61E3CBAFF0020A935 /* Optimizely.framework */; };
+		D80DEAFC1E3CBB9B0020A935 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80DEAFB1E3CBB9B0020A935 /* MobileCoreServices.framework */; };
+		D80DEAFE1E3CBBA50020A935 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80DEAFD1E3CBBA50020A935 /* AudioToolbox.framework */; };
 		D81566051E3BC65E00832FCF /* RepoSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81566041E3BC65E00832FCF /* RepoSectionController.swift */; };
 		D81566061E3BC65E00832FCF /* RepoSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81566041E3BC65E00832FCF /* RepoSectionController.swift */; };
 		D81566081E3BC9C800832FCF /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81566071E3BC9C800832FCF /* RepositoryCell.swift */; };
@@ -69,6 +72,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D80DEAF61E3CBAFF0020A935 /* Optimizely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Optimizely.framework; sourceTree = "<group>"; };
+		D80DEAFB1E3CBB9B0020A935 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		D80DEAFD1E3CBBA50020A935 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D81566041E3BC65E00832FCF /* RepoSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoSectionController.swift; sourceTree = "<group>"; };
 		D81566071E3BC9C800832FCF /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 		D815660C1E3C423500832FCF /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
@@ -161,6 +167,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D80DEAFA1E3CBAFF0020A935 /* Optimizely.framework in Frameworks */,
+				D80DEAFE1E3CBBA50020A935 /* AudioToolbox.framework in Frameworks */,
+				D80DEAFC1E3CBB9B0020A935 /* MobileCoreServices.framework in Frameworks */,
 				D8E81AA01E3BA46F0098EC6B /* Alamofire.framework in Frameworks */,
 				D8E81AA11E3BA46F0098EC6B /* IGListKit.framework in Frameworks */,
 				D8E81A8F1E3BA3CE0098EC6B /* Moya.framework in Frameworks */,
@@ -230,6 +239,9 @@
 		D8E81A0E1E3B6E700098EC6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D80DEAFD1E3CBBA50020A935 /* AudioToolbox.framework */,
+				D80DEAFB1E3CBB9B0020A935 /* MobileCoreServices.framework */,
+				D80DEAF61E3CBAFF0020A935 /* Optimizely.framework */,
 				D815660C1E3C423500832FCF /* Fabric.framework */,
 				D815660D1E3C423500832FCF /* Crashlytics.framework */,
 				D8E81A251E3B95AB0098EC6B /* Build */,
@@ -679,7 +691,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = myGithub/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(PROJECT_DIR)/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.namnh.myGithub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3c53b13b-6d2d-41a1-a95e-116f77b39817";
@@ -701,7 +713,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = myGithub/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(PROJECT_DIR)/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.namnh.myGithub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3c53b13b-6d2d-41a1-a95e-116f77b39817";
