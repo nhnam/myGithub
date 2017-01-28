@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     }()
     
     lazy var adapter: IGListAdapter = {
-       return IGListAdapter(updater: IGListAdapterUpdater(), viewController: self, workingRangeSize: 0)
+       return IGListAdapter(updater: IGListAdapterUpdater(), viewController: self, workingRangeSize: 1)
     }()
     
     override func viewDidLoad() {
@@ -30,9 +30,7 @@ class ViewController: UIViewController {
         adapter.collectionView = collectionView
         adapter.dataSource = self
         loader.loadRepos { [weak self] in
-            self?.adapter.reloadData(completion: { (done:Bool) in
-                
-            })
+            self?.adapter.reloadData{ (done) in }
         }
     }
     
