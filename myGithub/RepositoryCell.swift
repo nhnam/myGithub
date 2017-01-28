@@ -46,7 +46,7 @@ class RepositoryCell: UICollectionViewCell {
     }
     
     func config(repository repositoryObject: Repository) {
-        self.nameLabel.text = repositoryObject.name
+        self.nameLabel.text = "\(repositoryObject.name) \(repositoryObject.stars) ⭐️"
         self.linkLabel.text = repositoryObject.url
     }
 }
