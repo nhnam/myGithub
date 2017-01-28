@@ -26,13 +26,14 @@ extension RepoSectionController: IGListSectionType {
         guard let context = collectionContext else {
             return .zero
         }
-        return CGSize(width: context.containerSize.width, height: 50)
+        return CGSize(width: context.containerSize.width, height: 45)
     }
     
     func cellForItem(at index: Int) -> UICollectionViewCell {
         let cell = collectionContext!.dequeueReusableCell(of: RepositoryCell.self, for: self, at: index)
         if let cell = cell as? RepositoryCell {
-            cell.label.text = repository.name
+            cell.nameLabel.text = repository.name
+            cell.linkLabel.text = repository.url
         }
         print(repository.name)
         return cell
