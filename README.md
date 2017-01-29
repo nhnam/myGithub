@@ -1,4 +1,6 @@
-[![Throughput Graph](https://graphs.waffle.io/nhnam/myGithub.svg)](http://waffle.io/nhnam/myGithub)
+<p>
+[![Throughput Graph](https://graphs.waffle.io/nhnam/myGithub/throughput.svg)](http://waffle.io/nhnam/myGithub)
+</p>
 <img src="https://img.shields.io/badge/platform-iOS%208%2B-blue.svg?style=flat" alt="Platform: iOS 8+"/>
 <img src="https://img.shields.io/badge/language-swift%203-4BC51D.svg?style=flat" alt="Language: Swift 3" />
 [![codecov.io](https://codecov.io/gh/nhnam/myGithub/branch/master/graphs/badge.svg)](https://codecov.io/gh/nhnam/myGithub/branch/master)
