@@ -420,7 +420,7 @@
 					D8E819F51E3B63DB0098EC6B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 7MD88PM2GZ;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					D8E81A161E3B91FE0098EC6B = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -694,8 +694,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(PROJECT_DIR)/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.namnh.myGithub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "3c53b13b-6d2d-41a1-a95e-116f77b39817";
+				PROVISIONING_PROFILE_SPECIFIER = "myGithub Development";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -716,8 +716,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(PROJECT_DIR)/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.namnh.myGithub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "3c53b13b-6d2d-41a1-a95e-116f77b39817";
+				PROVISIONING_PROFILE_SPECIFIER = "myGithub Development";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
