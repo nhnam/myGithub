@@ -21,6 +21,7 @@
 		D81566121E3C58FA00832FCF /* FastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81566101E3C58FA00832FCF /* FastViewController.swift */; };
 		D83A92EF1E3C5D3500592A19 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A92EE1E3C5D3500592A19 /* EmptyView.swift */; };
 		D83A92F01E3C5D3500592A19 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A92EE1E3C5D3500592A19 /* EmptyView.swift */; };
+		D84877501E3E189600361E60 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D848774F1E3E189600361E60 /* SwiftyJSON.framework */; };
 		D8E819FA1E3B63DB0098EC6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E819F91E3B63DB0098EC6B /* AppDelegate.swift */; };
 		D8E819FC1E3B63DB0098EC6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E819FB1E3B63DB0098EC6B /* ViewController.swift */; };
 		D8E819FF1E3B63DB0098EC6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E819FD1E3B63DB0098EC6B /* Main.storyboard */; };
@@ -81,6 +82,7 @@
 		D815660D1E3C423500832FCF /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		D81566101E3C58FA00832FCF /* FastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastViewController.swift; sourceTree = "<group>"; };
 		D83A92EE1E3C5D3500592A19 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		D848774F1E3E189600361E60 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		D8E819F61E3B63DB0098EC6B /* myGithub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myGithub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E819F91E3B63DB0098EC6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8E819FB1E3B63DB0098EC6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D84877501E3E189600361E60 /* SwiftyJSON.framework in Frameworks */,
 				D80DEAFA1E3CBAFF0020A935 /* Optimizely.framework in Frameworks */,
 				D80DEAFE1E3CBBA50020A935 /* AudioToolbox.framework in Frameworks */,
 				D80DEAFC1E3CBB9B0020A935 /* MobileCoreServices.framework in Frameworks */,
@@ -239,6 +242,7 @@
 		D8E81A0E1E3B6E700098EC6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D848774F1E3E189600361E60 /* SwiftyJSON.framework */,
 				D80DEAFD1E3CBBA50020A935 /* AudioToolbox.framework */,
 				D80DEAFB1E3CBB9B0020A935 /* MobileCoreServices.framework */,
 				D80DEAF61E3CBAFF0020A935 /* Optimizely.framework */,
@@ -514,6 +518,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 			);
 			name = "Carthage Build Script";
 			outputPaths = (
@@ -631,6 +636,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -673,6 +679,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -696,7 +703,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3c53b13b-6d2d-41a1-a95e-116f77b39817";
 				PROVISIONING_PROFILE_SPECIFIER = "myGithub Development";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -718,7 +724,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3c53b13b-6d2d-41a1-a95e-116f77b39817";
 				PROVISIONING_PROFILE_SPECIFIER = "myGithub Development";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -735,7 +740,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.namnh.myGithubTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/myGithub.app/myGithub";
 			};
 			name = Debug;
@@ -753,7 +757,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.namnh.myGithubTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/myGithub.app/myGithub";
 			};
 			name = Release;

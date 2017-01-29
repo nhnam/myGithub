@@ -10,7 +10,7 @@ import UIKit
 import Fabric
 import Crashlytics
 import Optimizely
-
+import GDPerformanceView
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         Fabric.with([Crashlytics.self, Optimizely.self])
         Optimizely.start(withAPIToken: "AANaxDUBB0Oota8Srm-iOonZLF0m860H~8196291874", launchOptions:launchOptions)
-
+        
+        GDPerformanceMonitor.sharedInstance.startMonitoring()
+        
         return true
     }
 
@@ -31,6 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
         return false
+    }
+    
+    func applicationWillResignActive(_ application: UIApplication) {
+        GDPerformanceMonitor.sharedInstance.startMonitoring()
+    }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        GDPerformanceMonitor.sharedInstance.stopMonitoring()
     }
 
 }
