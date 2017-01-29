@@ -9,7 +9,6 @@
 import UIKit
 import Fabric
 import Crashlytics
-import Optimizely
 import GDPerformanceView
 
 @UIApplicationMain
@@ -20,20 +19,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
-        Fabric.with([Crashlytics.self, Optimizely.self])
-        Optimizely.start(withAPIToken: "AANaxDUBB0Oota8Srm-iOonZLF0m860H~8196291874", launchOptions:launchOptions)
+        Fabric.with([Crashlytics.self])
         
         GDPerformanceMonitor.sharedInstance.startMonitoring()
         
         return true
     }
 
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        if Optimizely.handleOpen(url) {
-            return true
-        }
-        return false
-    }
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+//        if Optimizely.handleOpen(url) {
+//            return true
+//        }
+//        return false
+//    }
     
     func applicationWillResignActive(_ application: UIApplication) {
         GDPerformanceMonitor.sharedInstance.startMonitoring()

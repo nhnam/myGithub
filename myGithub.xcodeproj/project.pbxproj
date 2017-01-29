@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D80DEAFA1E3CBAFF0020A935 /* Optimizely.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80DEAF61E3CBAFF0020A935 /* Optimizely.framework */; };
 		D80DEAFC1E3CBB9B0020A935 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80DEAFB1E3CBB9B0020A935 /* MobileCoreServices.framework */; };
 		D80DEAFE1E3CBBA50020A935 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80DEAFD1E3CBBA50020A935 /* AudioToolbox.framework */; };
 		D81566051E3BC65E00832FCF /* RepoSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81566041E3BC65E00832FCF /* RepoSectionController.swift */; };
@@ -73,7 +72,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D80DEAF61E3CBAFF0020A935 /* Optimizely.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Optimizely.framework; sourceTree = "<group>"; };
 		D80DEAFB1E3CBB9B0020A935 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D80DEAFD1E3CBBA50020A935 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D81566041E3BC65E00832FCF /* RepoSectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoSectionController.swift; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D84877501E3E189600361E60 /* SwiftyJSON.framework in Frameworks */,
-				D80DEAFA1E3CBAFF0020A935 /* Optimizely.framework in Frameworks */,
 				D80DEAFE1E3CBBA50020A935 /* AudioToolbox.framework in Frameworks */,
 				D80DEAFC1E3CBB9B0020A935 /* MobileCoreServices.framework in Frameworks */,
 				D8E81AA01E3BA46F0098EC6B /* Alamofire.framework in Frameworks */,
@@ -245,7 +242,6 @@
 				D848774F1E3E189600361E60 /* SwiftyJSON.framework */,
 				D80DEAFD1E3CBBA50020A935 /* AudioToolbox.framework */,
 				D80DEAFB1E3CBB9B0020A935 /* MobileCoreServices.framework */,
-				D80DEAF61E3CBAFF0020A935 /* Optimizely.framework */,
 				D815660C1E3C423500832FCF /* Fabric.framework */,
 				D815660D1E3C423500832FCF /* Crashlytics.framework */,
 				D8E81A251E3B95AB0098EC6B /* Build */,

@@ -16,21 +16,8 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>com.optimizely</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>optly8196291874</string>
-			</array>
-		</dict>
-	</array>
 	<key>CFBundleVersion</key>
-	<string>102</string>
+	<string>104</string>
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
