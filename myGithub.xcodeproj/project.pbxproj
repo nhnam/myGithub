@@ -45,6 +45,7 @@
 		D8E81AA91E3BA46F0098EC6B /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E81A511E3B95AB0098EC6B /* RxSwift.framework */; };
 		D8E81AAC1E3BBD590098EC6B /* RepositoriesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E81AAB1E3BBD590098EC6B /* RepositoriesLoader.swift */; };
 		D8E81AAD1E3BBD590098EC6B /* RepositoriesLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E81AAB1E3BBD590098EC6B /* RepositoriesLoader.swift */; };
+		D8EC1A881E3E486F00D378AE /* GDPerformanceView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8EC1A871E3E486F00D378AE /* GDPerformanceView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,7 @@
 		D8E81A7F1E3B95AB0098EC6B /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
 		D8E81A801E3B95AB0098EC6B /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = RxSwift.framework.dSYM; sourceTree = "<group>"; };
 		D8E81AAB1E3BBD590098EC6B /* RepositoriesLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoriesLoader.swift; sourceTree = "<group>"; };
+		D8EC1A871E3E486F00D378AE /* GDPerformanceView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GDPerformanceView.framework; path = Carthage/Build/iOS/GDPerformanceView.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8EC1A881E3E486F00D378AE /* GDPerformanceView.framework in Frameworks */,
 				D84877501E3E189600361E60 /* SwiftyJSON.framework in Frameworks */,
 				D80DEAFE1E3CBBA50020A935 /* AudioToolbox.framework in Frameworks */,
 				D80DEAFC1E3CBB9B0020A935 /* MobileCoreServices.framework in Frameworks */,
@@ -239,6 +242,7 @@
 		D8E81A0E1E3B6E700098EC6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8EC1A871E3E486F00D378AE /* GDPerformanceView.framework */,
 				D848774F1E3E189600361E60 /* SwiftyJSON.framework */,
 				D80DEAFD1E3CBBA50020A935 /* AudioToolbox.framework */,
 				D80DEAFB1E3CBB9B0020A935 /* MobileCoreServices.framework */,
@@ -515,6 +519,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/GDPerformanceView.framework",
 			);
 			name = "Carthage Build Script";
 			outputPaths = (

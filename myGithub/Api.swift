@@ -66,9 +66,11 @@ extension Api: TargetType{
     var sampleData: Data {
         switch self {
         case .userProfile(let name):
-            return "{\"login\":\(name), \"id\": 100}".data(using: .utf8)!
+            let json = "{\"login\":\"\(name)\", \"id\": 100}"
+            return json.data(using: .utf8)!
         case .userRepositories(_):
-            return "{\"name\":\"Nam's Repos\"}".data(using: .utf8)!
+            let json = "{\"name\":\"Nam's Repos\"}"
+            return json.data(using: .utf8)!
         }
     }
 }

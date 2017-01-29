@@ -8,11 +8,11 @@
 
 import Quick
 import Nimble
-//import IGListKit
+import SwiftyJSON
 
 class ApiSpec:QuickSpec {
     override func spec() {
-        describe("Api Management") {
+        describe("ApiProvider") {
             it("should has ApiProvider when app get started") {
                 expect(ApiProvider).toNot(beNil())
             }
@@ -35,6 +35,16 @@ class ApiSpec:QuickSpec {
                     }
                 })
             }
+            it("should has sample data for userProfile") {
+                let data = Api.userProfile("any_user").sampleData
+                let dataStringtify = JSON(data: data)
+                expect(dataStringtify["login"]).to(equal("any_user"))
+            }
+            it("should has sample data for userRepository") {
+                let data = Api.userRepositories("any_user").sampleData
+                let dataStringtify = JSON(data: data)
+                expect(dataStringtify["name"]).to(equal("Nam's Repos"))
+            }
         }
         describe("Repositories ViewController") {
             let sut = ViewController()
@@ -54,6 +64,15 @@ class ApiSpec:QuickSpec {
             it("should has adapter with datasource is set") {
                 let _ = sut.view
                 expect(sut.adapter.dataSource).toNot(beNil())
+            }
+            it("should has empty view if there's no data") {
+                let _ = sut.view
+                waitUntil(timeout: 1.0, action: { (done) in
+                    sut.adapter.reloadData(completion: { (_) in
+                        done()
+                    })
+                })
+                expect(sut.collectionView.subviews.first).to(beAnInstanceOf( EmptyView.self))
             }
             
         }
@@ -92,6 +111,7 @@ class ApiSpec:QuickSpec {
                 })
                 expect(arrRepos.count).to(equal(loader.repositories.count))
             }
+            
         }
     }
 }
