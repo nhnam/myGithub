@@ -6,6 +6,7 @@
 //  Copyright © 2017 ナム Nam Nguyen. All rights reserved.
 //
 
+import UIKit
 import Quick
 import Nimble
 import SwiftyJSON
@@ -74,7 +75,21 @@ class ApiSpec:QuickSpec {
                 })
                 expect(sut.collectionView.subviews.first).to(beAnInstanceOf( EmptyView.self))
             }
-            
+        }
+        describe("FastViewController") {
+            let sut = FastViewController()
+            it("should be an instance of UIViewController") {
+                expect(sut).to(beAKindOf(UIViewController.self))
+            }
+            it("should has view is loaded") {
+                expect(sut.view).toNot(beNil())
+            }
+            it("should has view with white background") {
+                expect(sut.view.backgroundColor).to(equal(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)))
+            }
+            it("shouldn't has a default title") {
+                expect(sut.title).to(beNil())
+            }
         }
         describe("RepositoriesLoader") {
             let loader = RepositoriesLoader()
@@ -111,7 +126,28 @@ class ApiSpec:QuickSpec {
                 })
                 expect(arrRepos.count).to(equal(loader.repositories.count))
             }
-            
+        }
+        describe("Repository") {
+            let reposJson = loadSampleUserRepositories()
+            it("should has 30 items"){
+                expect(reposJson.count).to(equal(30))
+            }
+            it("should has first Repository") {
+                let first = reposJson[0]
+                let repo = Repository(name: first["name"].string!,
+                                      url: first["html_url"].string!,
+                                      language: first["language"].string,
+                                      stars: first["stargazers_count"].int!)
+                expect(repo).toNot(beNil())
+            }
+            it("should has first Repository with name myGithub") {
+                let first = reposJson[0]
+                let repo = Repository(name: first["name"].string!,
+                                      url: first["html_url"].string!,
+                                      language: first["language"].string,
+                                      stars: first["stargazers_count"].int!)
+                expect(repo.name).to(equal("myGithub"))
+            }
         }
     }
 }

@@ -21,6 +21,8 @@
 		D83A92EF1E3C5D3500592A19 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A92EE1E3C5D3500592A19 /* EmptyView.swift */; };
 		D83A92F01E3C5D3500592A19 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A92EE1E3C5D3500592A19 /* EmptyView.swift */; };
 		D84877501E3E189600361E60 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D848774F1E3E189600361E60 /* SwiftyJSON.framework */; };
+		D86BBAA41E3F1FF100561BDE /* userRepositories_Sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D86BBAA31E3F1FF100561BDE /* userRepositories_Sample.json */; };
+		D86BBAA61E3F214500561BDE /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86BBAA51E3F214500561BDE /* TestHelper.swift */; };
 		D8D1B36F1E3EE062003329D2 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B36E1E3EE062003329D2 /* BuddyBuildSDK.framework */; };
 		D8D1B3741E3EE16B003329D2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B3731E3EE16B003329D2 /* AssetsLibrary.framework */; };
 		D8D1B3761E3EE177003329D2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B3751E3EE177003329D2 /* CoreTelephony.framework */; };
@@ -91,6 +93,8 @@
 		D81566101E3C58FA00832FCF /* FastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastViewController.swift; sourceTree = "<group>"; };
 		D83A92EE1E3C5D3500592A19 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		D848774F1E3E189600361E60 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		D86BBAA31E3F1FF100561BDE /* userRepositories_Sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userRepositories_Sample.json; sourceTree = "<group>"; };
+		D86BBAA51E3F214500561BDE /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		D8D1B36E1E3EE062003329D2 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		D8D1B3701E3EE12C003329D2 /* myGithub-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myGithub-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8D1B3731E3EE16B003329D2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -294,8 +298,10 @@
 		D8E81A181E3B91FE0098EC6B /* myGithubTests */ = {
 			isa = PBXGroup;
 			children = (
+				D86BBAA31E3F1FF100561BDE /* userRepositories_Sample.json */,
 				D8E81A191E3B91FE0098EC6B /* myGithubTests.swift */,
 				D8E81A1B1E3B91FE0098EC6B /* Info.plist */,
+				D86BBAA51E3F214500561BDE /* TestHelper.swift */,
 			);
 			path = myGithubTests;
 			sourceTree = "<group>";
@@ -507,6 +513,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D86BBAA41E3F1FF100561BDE /* userRepositories_Sample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +602,7 @@
 				D81566061E3BC65E00832FCF /* RepoSectionController.swift in Sources */,
 				D83A92F01E3C5D3500592A19 /* EmptyView.swift in Sources */,
 				D81566121E3C58FA00832FCF /* FastViewController.swift in Sources */,
+				D86BBAA61E3F214500561BDE /* TestHelper.swift in Sources */,
 				D8E81AAD1E3BBD590098EC6B /* RepositoriesLoader.swift in Sources */,
 				D8E81A1A1E3B91FE0098EC6B /* myGithubTests.swift in Sources */,
 			);
