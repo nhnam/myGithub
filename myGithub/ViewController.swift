@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         view.addSubview(collectionView)
         adapter.collectionView = collectionView
         adapter.dataSource = self
-        loader.loadRepos { [weak self] in
+        loader.loadRepos(username:"nhnam") { [weak self] success in
             self?.adapter.reloadData{ (done) in }
         }
     }
