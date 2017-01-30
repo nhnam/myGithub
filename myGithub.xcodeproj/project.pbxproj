@@ -21,6 +21,15 @@
 		D83A92EF1E3C5D3500592A19 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A92EE1E3C5D3500592A19 /* EmptyView.swift */; };
 		D83A92F01E3C5D3500592A19 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A92EE1E3C5D3500592A19 /* EmptyView.swift */; };
 		D84877501E3E189600361E60 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D848774F1E3E189600361E60 /* SwiftyJSON.framework */; };
+		D8D1B36F1E3EE062003329D2 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B36E1E3EE062003329D2 /* BuddyBuildSDK.framework */; };
+		D8D1B3741E3EE16B003329D2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B3731E3EE16B003329D2 /* AssetsLibrary.framework */; };
+		D8D1B3761E3EE177003329D2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B3751E3EE177003329D2 /* CoreTelephony.framework */; };
+		D8D1B3781E3EE17E003329D2 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B3771E3EE17E003329D2 /* CoreText.framework */; };
+		D8D1B37A1E3EE184003329D2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B3791E3EE184003329D2 /* CoreMedia.framework */; };
+		D8D1B37C1E3EE189003329D2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B37B1E3EE189003329D2 /* AVFoundation.framework */; };
+		D8D1B37E1E3EE191003329D2 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B37D1E3EE191003329D2 /* CoreVideo.framework */; };
+		D8D1B3801E3EE199003329D2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B37F1E3EE199003329D2 /* QuartzCore.framework */; };
+		D8D1B3821E3EE19E003329D2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B3811E3EE19E003329D2 /* SystemConfiguration.framework */; };
 		D8E819FA1E3B63DB0098EC6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E819F91E3B63DB0098EC6B /* AppDelegate.swift */; };
 		D8E819FC1E3B63DB0098EC6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8E819FB1E3B63DB0098EC6B /* ViewController.swift */; };
 		D8E819FF1E3B63DB0098EC6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E819FD1E3B63DB0098EC6B /* Main.storyboard */; };
@@ -82,6 +91,16 @@
 		D81566101E3C58FA00832FCF /* FastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastViewController.swift; sourceTree = "<group>"; };
 		D83A92EE1E3C5D3500592A19 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		D848774F1E3E189600361E60 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		D8D1B36E1E3EE062003329D2 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
+		D8D1B3701E3EE12C003329D2 /* myGithub-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myGithub-Bridging-Header.h"; sourceTree = "<group>"; };
+		D8D1B3731E3EE16B003329D2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		D8D1B3751E3EE177003329D2 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D8D1B3771E3EE17E003329D2 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		D8D1B3791E3EE184003329D2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		D8D1B37B1E3EE189003329D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D8D1B37D1E3EE191003329D2 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		D8D1B37F1E3EE199003329D2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D8D1B3811E3EE19E003329D2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D8E819F61E3B63DB0098EC6B /* myGithub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myGithub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E819F91E3B63DB0098EC6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8E819FB1E3B63DB0098EC6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +188,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8D1B3821E3EE19E003329D2 /* SystemConfiguration.framework in Frameworks */,
+				D8D1B3801E3EE199003329D2 /* QuartzCore.framework in Frameworks */,
+				D8D1B37E1E3EE191003329D2 /* CoreVideo.framework in Frameworks */,
+				D8D1B37C1E3EE189003329D2 /* AVFoundation.framework in Frameworks */,
+				D8D1B37A1E3EE184003329D2 /* CoreMedia.framework in Frameworks */,
+				D8D1B3781E3EE17E003329D2 /* CoreText.framework in Frameworks */,
+				D8D1B3761E3EE177003329D2 /* CoreTelephony.framework in Frameworks */,
+				D8D1B3741E3EE16B003329D2 /* AssetsLibrary.framework in Frameworks */,
+				D8D1B36F1E3EE062003329D2 /* BuddyBuildSDK.framework in Frameworks */,
 				D8EC1A881E3E486F00D378AE /* GDPerformanceView.framework in Frameworks */,
 				D84877501E3E189600361E60 /* SwiftyJSON.framework in Frameworks */,
 				D80DEAFE1E3CBBA50020A935 /* AudioToolbox.framework in Frameworks */,
@@ -235,6 +263,7 @@
 				D81566071E3BC9C800832FCF /* RepositoryCell.swift */,
 				D81566101E3C58FA00832FCF /* FastViewController.swift */,
 				D83A92EE1E3C5D3500592A19 /* EmptyView.swift */,
+				D8D1B3701E3EE12C003329D2 /* myGithub-Bridging-Header.h */,
 			);
 			path = myGithub;
 			sourceTree = "<group>";
@@ -242,6 +271,15 @@
 		D8E81A0E1E3B6E700098EC6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8D1B3811E3EE19E003329D2 /* SystemConfiguration.framework */,
+				D8D1B37F1E3EE199003329D2 /* QuartzCore.framework */,
+				D8D1B37D1E3EE191003329D2 /* CoreVideo.framework */,
+				D8D1B37B1E3EE189003329D2 /* AVFoundation.framework */,
+				D8D1B3791E3EE184003329D2 /* CoreMedia.framework */,
+				D8D1B3771E3EE17E003329D2 /* CoreText.framework */,
+				D8D1B3751E3EE177003329D2 /* CoreTelephony.framework */,
+				D8D1B3731E3EE16B003329D2 /* AssetsLibrary.framework */,
+				D8D1B36E1E3EE062003329D2 /* BuddyBuildSDK.framework */,
 				D8EC1A871E3E486F00D378AE /* GDPerformanceView.framework */,
 				D848774F1E3E189600361E60 /* SwiftyJSON.framework */,
 				D80DEAFD1E3CBBA50020A935 /* AudioToolbox.framework */,
@@ -424,6 +462,7 @@
 					D8E819F51E3B63DB0098EC6B = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 7MD88PM2GZ;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
 					D8E81A161E3B91FE0098EC6B = {
@@ -690,6 +729,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7MD88PM2GZ;
@@ -704,6 +744,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3c53b13b-6d2d-41a1-a95e-116f77b39817";
 				PROVISIONING_PROFILE_SPECIFIER = "myGithub Development";
+				SWIFT_OBJC_BRIDGING_HEADER = "myGithub/myGithub-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -711,6 +754,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7MD88PM2GZ;
@@ -725,6 +769,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "3c53b13b-6d2d-41a1-a95e-116f77b39817";
 				PROVISIONING_PROFILE_SPECIFIER = "myGithub Development";
+				SWIFT_OBJC_BRIDGING_HEADER = "myGithub/myGithub-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

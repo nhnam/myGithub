@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GDPerformanceMonitor.sharedInstance.startMonitoring()
         
+        BuddyBuildSDK.setup()
+        
         return true
     }
 
