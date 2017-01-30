@@ -33,28 +33,39 @@ class Repository:NSObject {
         self.language = language
         self.stars = stars
     }
+    override func isEqual(_ object: Any?) -> Bool {
+        guard let repoB = object as? Repository else {
+            return false
+        }
+        return (self.name.caseInsensitiveCompare(repoB.name) == .orderedSame)
+    }
 }
 
 class RepositoriesLoader {
     var repositories:[Repository] = []
     
-    func loadRepos( _ finish:@escaping ()->()) {
-        ApiProvider.request(Api.userRepositories("nhnam")) { [unowned self] (result) in
+    func loadRepos(username aUsername:String, complete finish:@escaping (Bool) -> ()) {
+        ApiProvider.request(Api.userRepositories(aUsername)) { [unowned self] (result) in
+            var success = true
             switch result {
             case let .success(response):
                 do {
-                    let json =  try response.mapJSON() as? Array<Any>
-                    json?.forEach{ (element) in
-                        if let itemDict = element as? Dictionary<String, Any>{
-                            let repo = Repository(name: itemDict["name"] as! String,
-                                                  url: itemDict["html_url"] as! String,
-                                                  language: itemDict["language"] as? String,
-                                                  stars: itemDict["stargazers_count"] as! Int)
-                            self.repositories.append(repo)
+                    let json =  try response.mapJSON()
+                    if let json = json as? Array<Any>{
+                        json.forEach{ (element) in
+                            if let itemDict = element as? Dictionary<String, Any>{
+                                let repo = Repository(name: itemDict["name"] as! String,
+                                                      url: itemDict["html_url"] as! String,
+                                                      language: itemDict["language"] as? String,
+                                                      stars: itemDict["stargazers_count"] as! Int)
+                                self.repositories.append(repo)
+                            }
                         }
+                    } else {
+                        success = false
                     }
                 } catch {
-                    
+                    success = false
                 }
                 break
             case let .failure(error):
@@ -62,9 +73,10 @@ class RepositoriesLoader {
                     return
                 }
                 print(errorMessage)
+                success = false
                 break
             }
-            finish()
+            finish(success)
         }
     }
 }

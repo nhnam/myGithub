@@ -10,6 +10,7 @@ import UIKit
 import Quick
 import Nimble
 import SwiftyJSON
+import RandomKit
 
 class ApiSpec:QuickSpec {
     override func spec() {
@@ -98,7 +99,7 @@ class ApiSpec:QuickSpec {
             }
             it("should has data after loadRepos") {
                 waitUntil(timeout: 5.0, action: { (done) in
-                    loader.loadRepos {
+                    loader.loadRepos(username:"nhnam") { success in
                         expect(loader.repositories.count).to(equal(30))
                         done()
                     }
@@ -106,7 +107,7 @@ class ApiSpec:QuickSpec {
             }
             it("should has data as a list of Repository after app started") {
                 waitUntil(timeout: 5.0, action: { (done) in
-                    loader.loadRepos {
+                    loader.loadRepos(username:"nhnam") { success in
                         done()
                     }
                 })
@@ -117,7 +118,7 @@ class ApiSpec:QuickSpec {
             }
             it("should has data as a list of Repository with name, url") {
                 waitUntil(timeout: 5.0, action: { (done) in
-                    loader.loadRepos {
+                    loader.loadRepos(username:"nhnam") { success in
                         done()
                     }
                 })
@@ -125,6 +126,16 @@ class ApiSpec:QuickSpec {
                     return(element.name != nil && element.url != nil)
                 })
                 expect(arrRepos.count).to(equal(loader.repositories.count))
+            }
+            it("should should return success false with invalid username") {
+                var _success = true
+                waitUntil(timeout: 5.0, action: { (done) in
+                    loader.loadRepos(username:"nhnamxxx") { success in
+                        _success = success
+                        done()
+                    }
+                })
+                expect(_success).to(beFalse())
             }
         }
         describe("Repository") {
@@ -147,6 +158,25 @@ class ApiSpec:QuickSpec {
                                       language: first["language"].string,
                                       stars: first["stargazers_count"].int!)
                 expect(repo.name).to(equal("myGithub"))
+            }
+            it("should be equal if 2 repo has the same name"){
+                let repoA = Repository(name: "Repo_ABC",
+                                       url: "http://github.com",
+                                      language: "Swift",
+                                      stars: 2)
+                let repoB = Repository(name: "Repo_ABC",
+                                       url: "http://github.com",
+                                       language: "Swift",
+                                       stars: 2)
+                expect(repoA.isEqual(toDiffableObject: repoB)).to(beTrue())
+            }
+            it("shouldnotbe equal if 1 of 2 is not a repo"){
+                let repoA = Repository(name: "Repo_ABC",
+                                       url: "http://github.com",
+                                       language: "Swift",
+                                       stars: 2)
+                let repoB = "I am not a Repo"
+                expect(repoA.isEqual(repoB)).to(beFalse())
             }
         }
     }

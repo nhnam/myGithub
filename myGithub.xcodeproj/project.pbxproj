@@ -18,6 +18,8 @@
 		D815660F1E3C423500832FCF /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D815660D1E3C423500832FCF /* Crashlytics.framework */; };
 		D81566111E3C58FA00832FCF /* FastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81566101E3C58FA00832FCF /* FastViewController.swift */; };
 		D81566121E3C58FA00832FCF /* FastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81566101E3C58FA00832FCF /* FastViewController.swift */; };
+		D829BE741E3F9EA200FB52F6 /* RandomKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D829BE721E3F9EA200FB52F6 /* RandomKit.framework */; };
+		D829BE751E3F9EA200FB52F6 /* ShiftOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D829BE731E3F9EA200FB52F6 /* ShiftOperations.framework */; };
 		D83A92EF1E3C5D3500592A19 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A92EE1E3C5D3500592A19 /* EmptyView.swift */; };
 		D83A92F01E3C5D3500592A19 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A92EE1E3C5D3500592A19 /* EmptyView.swift */; };
 		D84877501E3E189600361E60 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D848774F1E3E189600361E60 /* SwiftyJSON.framework */; };
@@ -91,6 +93,8 @@
 		D815660C1E3C423500832FCF /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		D815660D1E3C423500832FCF /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		D81566101E3C58FA00832FCF /* FastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastViewController.swift; sourceTree = "<group>"; };
+		D829BE721E3F9EA200FB52F6 /* RandomKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RandomKit.framework; path = Carthage/Build/iOS/RandomKit.framework; sourceTree = "<group>"; };
+		D829BE731E3F9EA200FB52F6 /* ShiftOperations.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ShiftOperations.framework; path = Carthage/Build/iOS/ShiftOperations.framework; sourceTree = "<group>"; };
 		D83A92EE1E3C5D3500592A19 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		D848774F1E3E189600361E60 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		D86BBAA31E3F1FF100561BDE /* userRepositories_Sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userRepositories_Sample.json; sourceTree = "<group>"; };
@@ -224,6 +228,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D829BE741E3F9EA200FB52F6 /* RandomKit.framework in Frameworks */,
+				D829BE751E3F9EA200FB52F6 /* ShiftOperations.framework in Frameworks */,
 				D8E81A961E3BA43E0098EC6B /* Nimble.framework in Frameworks */,
 				D8E81A971E3BA43E0098EC6B /* Quick.framework in Frameworks */,
 				D8E81A9F1E3BA43E0098EC6B /* RxTest.framework in Frameworks */,
@@ -275,6 +281,8 @@
 		D8E81A0E1E3B6E700098EC6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D829BE721E3F9EA200FB52F6 /* RandomKit.framework */,
+				D829BE731E3F9EA200FB52F6 /* ShiftOperations.framework */,
 				D8D1B3811E3EE19E003329D2 /* SystemConfiguration.framework */,
 				D8D1B37F1E3EE199003329D2 /* QuartzCore.framework */,
 				D8D1B37D1E3EE191003329D2 /* CoreVideo.framework */,
