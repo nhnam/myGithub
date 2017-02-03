@@ -258,6 +258,22 @@ SWIFT_CLASS("_TtC7RxCocoa13DelegateProxy")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
+@class RxTextStorageDelegateProxy;
+
+@interface NSTextStorage (SWIFT_EXTENSION(RxCocoa))
+/**
+  Factory method that enables subclasses to implement their own \code
+  delegate
+  \endcode.
+
+  returns:
+  Instance of delegate proxy that wraps \code
+  delegate
+  \endcode.
+*/
+- (RxTextStorageDelegateProxy * _Nonnull)createRxDelegateProxy;
+@end
+
 
 /**
   For more information take a look at \code
@@ -395,6 +411,12 @@ SWIFT_CLASS("_TtC7RxCocoa25RxPickerViewDelegateProxy")
   DelegateProxyType
   \endcode.
 */
++ (id _Nonnull)createProxyForObject:(id _Nonnull)object;
+/**
+  For more information take a look at \code
+  DelegateProxyType
+  \endcode.
+*/
 + (void)setCurrentDelegate:(id _Nullable)delegate toObject:(id _Nonnull)object;
 /**
   For more information take a look at \code
@@ -443,6 +465,12 @@ SWIFT_CLASS("_TtC7RxCocoa24RxSearchBarDelegateProxy")
 */
 SWIFT_CLASS("_TtC7RxCocoa31RxSearchControllerDelegateProxy")
 @interface RxSearchControllerDelegateProxy : DelegateProxy <UISearchControllerDelegate>
+/**
+  For more information take a look at \code
+  DelegateProxyType
+  \endcode.
+*/
++ (id _Nonnull)createProxyForObject:(id _Nonnull)object;
 /**
   For more information take a look at \code
   DelegateProxyType
@@ -610,6 +638,12 @@ SWIFT_CLASS("_TtC7RxCocoa26RxTextStorageDelegateProxy")
   DelegateProxyType
   \endcode.
 */
++ (id _Nonnull)createProxyForObject:(id _Nonnull)object;
+/**
+  For more information take a look at \code
+  DelegateProxyType
+  \endcode.
+*/
 + (void)setCurrentDelegate:(id _Nullable)delegate toObject:(id _Nonnull)object;
 /**
   For more information take a look at \code
@@ -652,6 +686,12 @@ SWIFT_CLASS("_TtC7RxCocoa23RxTextViewDelegateProxy")
 
 SWIFT_CLASS("_TtC7RxCocoa22RxWebViewDelegateProxy")
 @interface RxWebViewDelegateProxy : DelegateProxy <UIWebViewDelegate>
+/**
+  For more information take a look at \code
+  DelegateProxyType
+  \endcode.
+*/
++ (id _Nonnull)createProxyForObject:(id _Nonnull)object;
 /**
   For more information take a look at \code
   DelegateProxyType
@@ -702,6 +742,21 @@ SWIFT_CLASS("_TtC7RxCocoa25TableViewDataSourceNotSet")
 @end
 
 
+@interface UIPickerView (SWIFT_EXTENSION(RxCocoa))
+/**
+  Factory method that enables subclasses to implement their own \code
+  delegate
+  \endcode.
+
+  returns:
+  Instance of delegate proxy that wraps \code
+  delegate
+  \endcode.
+*/
+- (RxPickerViewDelegateProxy * _Nonnull)createRxDelegateProxy;
+@end
+
+
 @interface UIScrollView (SWIFT_EXTENSION(RxCocoa))
 /**
   Factory method that enables subclasses to implement their own \code
@@ -729,6 +784,21 @@ SWIFT_CLASS("_TtC7RxCocoa25TableViewDataSourceNotSet")
   \endcode.
 */
 - (RxSearchBarDelegateProxy * _Nonnull)createRxDelegateProxy;
+@end
+
+
+@interface UISearchController (SWIFT_EXTENSION(RxCocoa))
+/**
+  Factory method that enables subclasses to implement their own \code
+  delegate
+  \endcode.
+
+  returns:
+  Instance of delegate proxy that wraps \code
+  delegate
+  \endcode.
+*/
+- (RxSearchControllerDelegateProxy * _Nonnull)createRxDelegateProxy;
 @end
 
 
@@ -800,6 +870,21 @@ SWIFT_CLASS("_TtC7RxCocoa25TableViewDataSourceNotSet")
   \endcode.
 */
 - (RxScrollViewDelegateProxy * _Nonnull)createRxDelegateProxy;
+@end
+
+
+@interface UIWebView (SWIFT_EXTENSION(RxCocoa))
+/**
+  Factory method that enables subclasses to implement their own \code
+  delegate
+  \endcode.
+
+  returns:
+  Instance of delegate proxy that wraps \code
+  delegate
+  \endcode.
+*/
+- (RxWebViewDelegateProxy * _Nonnull)createRxDelegateProxy;
 @end
 
 
