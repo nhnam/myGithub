@@ -1,3 +1,4 @@
 github "Instagram/IGListKit"
 github "Moya/Moya"
 github "SwiftyJSON/SwiftyJSON"
+github "ViccAlexander/Chameleon"

@@ -11,6 +11,7 @@ import Quick
 import Nimble
 import SwiftyJSON
 import RandomKit
+import Chameleon
 
 class ApiSpec:QuickSpec {
     override func spec() {
@@ -75,6 +76,19 @@ class ApiSpec:QuickSpec {
                     })
                 })
                 expect(sut.collectionView.subviews.first).to(beAnInstanceOf( EmptyView.self))
+            }
+            it("should has navigationcontroller when app started") {
+                let bundle = Bundle(for: ApiSpec.self)
+                let storyboard = UIStoryboard.init(name: "Main", bundle: bundle)
+                let rootViewController = storyboard.instantiateInitialViewController()
+                expect(rootViewController).to(beAnInstanceOf(UINavigationController.self))
+            }
+            it("should has navigation bar color is flatSand") {
+                let bundle = Bundle(for: ApiSpec.self)
+                let storyboard = UIStoryboard.init(name: "Main", bundle: bundle)
+                let rootViewController = storyboard.instantiateInitialViewController() as? UINavigationController
+                let barColor = rootViewController?.navigationBar.barTintColor
+                expect(barColor?.hexValue()).to(equal("#ECEFF1"))
             }
         }
         describe("FastViewController") {

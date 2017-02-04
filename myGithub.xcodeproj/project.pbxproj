@@ -25,6 +25,8 @@
 		D84877501E3E189600361E60 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D848774F1E3E189600361E60 /* SwiftyJSON.framework */; };
 		D86BBAA41E3F1FF100561BDE /* userRepositories_Sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D86BBAA31E3F1FF100561BDE /* userRepositories_Sample.json */; };
 		D86BBAA61E3F214500561BDE /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86BBAA51E3F214500561BDE /* TestHelper.swift */; };
+		D8ABD8571E45D24B008B577E /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8ABD8561E45D24B008B577E /* Chameleon.framework */; };
+		D8ABD8581E45D4EE008B577E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E819FD1E3B63DB0098EC6B /* Main.storyboard */; };
 		D8D1B36F1E3EE062003329D2 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B36E1E3EE062003329D2 /* BuddyBuildSDK.framework */; };
 		D8D1B3741E3EE16B003329D2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B3731E3EE16B003329D2 /* AssetsLibrary.framework */; };
 		D8D1B3761E3EE177003329D2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B3751E3EE177003329D2 /* CoreTelephony.framework */; };
@@ -84,6 +86,7 @@
 		D848774F1E3E189600361E60 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		D86BBAA31E3F1FF100561BDE /* userRepositories_Sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userRepositories_Sample.json; sourceTree = "<group>"; };
 		D86BBAA51E3F214500561BDE /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		D8ABD8561E45D24B008B577E /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
 		D8D1B36E1E3EE062003329D2 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		D8D1B3701E3EE12C003329D2 /* myGithub-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myGithub-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8D1B3731E3EE16B003329D2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -114,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8ABD8571E45D24B008B577E /* Chameleon.framework in Frameworks */,
 				D8D1B3821E3EE19E003329D2 /* SystemConfiguration.framework in Frameworks */,
 				D8D1B3801E3EE199003329D2 /* QuartzCore.framework in Frameworks */,
 				D8D1B37E1E3EE191003329D2 /* CoreVideo.framework in Frameworks */,
@@ -186,6 +190,7 @@
 		D8E81A0E1E3B6E700098EC6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8ABD8561E45D24B008B577E /* Chameleon.framework */,
 				D829BE721E3F9EA200FB52F6 /* RandomKit.framework */,
 				D829BE731E3F9EA200FB52F6 /* ShiftOperations.framework */,
 				D8D1B3811E3EE19E003329D2 /* SystemConfiguration.framework */,
@@ -319,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D86BBAA41E3F1FF100561BDE /* userRepositories_Sample.json in Resources */,
+				D8ABD8581E45D4EE008B577E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,13 +377,14 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/GDPerformanceView.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Chameleon.framework",
 			);
 			name = "Carthage Build Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n./clean.sh";
 		};
 /* End PBXShellScriptBuildPhase section */
 

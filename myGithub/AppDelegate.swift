@@ -10,6 +10,7 @@ import UIKit
 import Fabric
 import Crashlytics
 import GDPerformanceView
+import Chameleon
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GDPerformanceMonitor.sharedInstance.startMonitoring()
         
         BuddyBuildSDK.setup()
+        
+        Chameleon.setGlobalThemeUsingPrimaryColor(UIColor(hexString: "#ECEFF1"), with: .contrast)
         
         return true
     }

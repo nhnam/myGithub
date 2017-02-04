@@ -1,4 +1,5 @@
 github "Alamofire/Alamofire" "4.3.0"
+github "ViccAlexander/Chameleon" "2.2.0"
 github "dani-gavrilov/GDPerformanceView-Swift" "1.1.2"
 github "Instagram/IGListKit" "2.1.0"
 github "Quick/Nimble" "v6.0.1"

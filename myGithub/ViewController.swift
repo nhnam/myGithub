@@ -12,6 +12,10 @@ import IGListKit
 
 class ViewController: UIViewController {
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     let loader = RepositoriesLoader()
     let collectionView: IGListCollectionView = {
        let view = IGListCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
