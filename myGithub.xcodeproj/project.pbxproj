@@ -27,6 +27,7 @@
 		D86BBAA61E3F214500561BDE /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86BBAA51E3F214500561BDE /* TestHelper.swift */; };
 		D8ABD8571E45D24B008B577E /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8ABD8561E45D24B008B577E /* Chameleon.framework */; };
 		D8ABD8581E45D4EE008B577E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E819FD1E3B63DB0098EC6B /* Main.storyboard */; };
+		D8C50C9E1E45DE840059A592 /* ExtTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C50C9D1E45DE840059A592 /* ExtTest.swift */; };
 		D8D1B36F1E3EE062003329D2 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B36E1E3EE062003329D2 /* BuddyBuildSDK.framework */; };
 		D8D1B3741E3EE16B003329D2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B3731E3EE16B003329D2 /* AssetsLibrary.framework */; };
 		D8D1B3761E3EE177003329D2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D1B3751E3EE177003329D2 /* CoreTelephony.framework */; };
@@ -87,6 +88,7 @@
 		D86BBAA31E3F1FF100561BDE /* userRepositories_Sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userRepositories_Sample.json; sourceTree = "<group>"; };
 		D86BBAA51E3F214500561BDE /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		D8ABD8561E45D24B008B577E /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
+		D8C50C9D1E45DE840059A592 /* ExtTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtTest.swift; sourceTree = "<group>"; };
 		D8D1B36E1E3EE062003329D2 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		D8D1B3701E3EE12C003329D2 /* myGithub-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "myGithub-Bridging-Header.h"; sourceTree = "<group>"; };
 		D8D1B3731E3EE16B003329D2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
@@ -219,6 +221,7 @@
 				D8E81A191E3B91FE0098EC6B /* myGithubTests.swift */,
 				D8E81A1B1E3B91FE0098EC6B /* Info.plist */,
 				D86BBAA51E3F214500561BDE /* TestHelper.swift */,
+				D8C50C9D1E45DE840059A592 /* ExtTest.swift */,
 			);
 			path = myGithubTests;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				D86BBAA61E3F214500561BDE /* TestHelper.swift in Sources */,
 				D8E81AAD1E3BBD590098EC6B /* RepositoriesLoader.swift in Sources */,
 				D8E81A1A1E3B91FE0098EC6B /* myGithubTests.swift in Sources */,
+				D8C50C9E1E45DE840059A592 /* ExtTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
