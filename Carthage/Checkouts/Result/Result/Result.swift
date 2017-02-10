@@ -89,7 +89,6 @@ public enum Result<T, Error: Swift.Error>: ResultProtocol, CustomStringConvertib
 		return NSError(domain: errorDomain, code: 0, userInfo: userInfo)
 	}
 
-
 	// MARK: CustomStringConvertible
 
 	public var description: String {
@@ -97,7 +96,6 @@ public enum Result<T, Error: Swift.Error>: ResultProtocol, CustomStringConvertib
 			ifSuccess: { ".success(\($0))" },
 			ifFailure: { ".failure(\($0))" })
 	}
-
 
 	// MARK: CustomDebugStringConvertible
 
@@ -163,7 +161,7 @@ public func `try`(_ function: String = #function, file: String = #file, line: In
 #endif
 
 // MARK: - ErrorProtocolConvertible conformance
-	
+
 extension NSError: ErrorProtocolConvertible {
 	public static func error(from error: Swift.Error) -> Self {
 		func cast<T: NSError>(_ error: Swift.Error) -> T {

@@ -17,17 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         Fabric.with([Crashlytics.self])
-        
+
         GDPerformanceMonitor.sharedInstance.startMonitoring()
-        
+
         BuddyBuildSDK.setup()
-        
+
         Chameleon.setGlobalThemeUsingPrimaryColor(UIColor(hexString: "#ECEFF1"), with: .contrast)
-        
+
         return true
     }
 
@@ -37,14 +36,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
 //        return false
 //    }
-    
+
     func applicationWillResignActive(_ application: UIApplication) {
         GDPerformanceMonitor.sharedInstance.startMonitoring()
     }
-    
+
     func applicationWillTerminate(_ application: UIApplication) {
         GDPerformanceMonitor.sharedInstance.stopMonitoring()
     }
 
 }
-

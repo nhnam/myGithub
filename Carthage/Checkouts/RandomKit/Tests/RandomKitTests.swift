@@ -104,7 +104,7 @@ class RandomKitTests: XCTestCase {
 
     func testRandomFromCollectionType() {
         let arr = ["A", "B", "C", "D", "E", "F", "H", "I"]
-        let dict = ["k1" : "v1", "k2" : "v2", "k3" : "v3"]
+        let dict = ["k1": "v1", "k2": "v2", "k3": "v3"]
         for _ in 0...testCount {
             XCTAssertNotNil(arr.random, "Random element in non-empty array is nil")
             XCTAssertNotNil(dict.random, "Random element in non-empty dictionary is nil")

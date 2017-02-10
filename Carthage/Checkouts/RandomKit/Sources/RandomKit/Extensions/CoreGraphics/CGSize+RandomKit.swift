@@ -46,7 +46,7 @@ extension CGSize: Random {
     public static func random(within widthRange: ClosedRange<CGFloat>,
                               _ heightRange: ClosedRange<CGFloat>,
                               using randomGenerator: RandomGenerator = .default) -> CGSize {
-        return CGSize(width:  .random(within: widthRange,  using: randomGenerator),
+        return CGSize(width:  .random(within: widthRange, using: randomGenerator),
                       height: .random(within: heightRange, using: randomGenerator))
     }
 

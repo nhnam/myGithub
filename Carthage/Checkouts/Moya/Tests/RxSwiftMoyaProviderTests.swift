@@ -105,8 +105,8 @@ class RxSwiftMoyaProviderSpec: QuickSpec {
 
             it("emits identical response for inflight requests") {
                 let target: GitHub = .zen
-                let signalProducer1:Observable<Moya.Response> = provider.request(target)
-                let signalProducer2:Observable<Moya.Response> = provider.request(target)
+                let signalProducer1: Observable<Moya.Response> = provider.request(target)
+                let signalProducer2: Observable<Moya.Response> = provider.request(target)
 
                 expect(provider.inflightRequests.keys.count).to(equal(0))
 

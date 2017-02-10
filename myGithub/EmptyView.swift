@@ -14,7 +14,7 @@ class EmptyView: UIView {
         self.init(frame: .zero)
         setup()
     }
-    
+
     private func setup() {
         self.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         let label = UILabel()
@@ -23,5 +23,5 @@ class EmptyView: UIView {
         label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.addSubview(label)
     }
-    
+
 }

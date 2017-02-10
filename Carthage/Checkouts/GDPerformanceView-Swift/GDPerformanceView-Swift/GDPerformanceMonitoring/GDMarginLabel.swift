@@ -23,13 +23,13 @@
 import UIKit
 
 internal class GDMarginLabel: UILabel {
-    
+
     // MARK: Private Properties
-    
-    private var edgeInsets: UIEdgeInsets = UIEdgeInsetsMake(0.0, 5.0, 0.0, 5.0)
-    
+
+    private var edgeInsets: UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 5.0, bottom: 0.0, right: 5.0)
+
     // MARK: Properties Overriders
-    
+
     override internal var intrinsicContentSize: CGSize {
         get {
             var size = super.intrinsicContentSize
@@ -38,18 +38,18 @@ internal class GDMarginLabel: UILabel {
             return size
         }
     }
-    
+
     // MARK: Init Methods & Superclass Overriders
-    
+
     override func drawText(in rect: CGRect) {
         super.drawText(in: UIEdgeInsetsInsetRect(rect, self.edgeInsets))
     }
-    
+
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         var sizeThatFits = super.sizeThatFits(size)
         sizeThatFits.width += self.edgeInsets.left + self.edgeInsets.right
         sizeThatFits.height += self.edgeInsets.top + self.edgeInsets.bottom
         return sizeThatFits
     }
-    
+
 }

@@ -59,7 +59,6 @@ import WatchKit
 
 #endif
 
-
 #if os(iOS) || os(watchOS)
 extension UIColor: Random {
 
@@ -84,6 +83,3 @@ extension UIColor: Random {
 
 }
 #endif
-
-
-

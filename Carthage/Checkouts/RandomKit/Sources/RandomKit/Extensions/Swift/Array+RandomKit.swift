@@ -86,7 +86,7 @@ extension Array {
     /// - parameter count: The number of elements to return.
     /// - parameter randomGenerator: The random generator to use.
     public func randomSlice(count: Int, using randomGenerator: RandomGenerator = .default) -> Array {
-        if count <= 0  {
+        if count <= 0 {
             return []
         }
         if count >= self.count {
@@ -113,7 +113,7 @@ extension Array {
     /// - parameter weights: Apply weights on element.
     /// - parameter randomGenerator: The random generator to use.
     public func randomSlice(count: Int, weights: [Double], using randomGenerator: RandomGenerator = .default) -> Array {
-        if count <= 0  {
+        if count <= 0 {
             return []
         }
         if count >= self.count || weights.count < self.count {

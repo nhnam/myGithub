@@ -28,7 +28,7 @@
 import RandomKit
 import Foundation
 
-func time(count: Int, closure: () -> ()) -> TimeInterval {
+func time(count: Int, closure: () -> Void) -> TimeInterval {
     let start = Date()
     for _ in 0 ..< count {
         closure()
@@ -36,7 +36,7 @@ func time(count: Int, closure: () -> ()) -> TimeInterval {
     return Date().timeIntervalSince(start)
 }
 
-func benchmark(count: Int, closure: () -> ()) {
+func benchmark(count: Int, closure: () -> Void) {
     let total = time(count: count, closure: closure)
     let indiv = total / Double(count)
     print("\(count) in " + style(total, with: [.blue]) + " seconds")

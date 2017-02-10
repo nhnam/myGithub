@@ -17,7 +17,6 @@ final class ResultTests: XCTestCase {
 		XCTAssert(Result(nil, failWith: error) == failure)
 	}
 
-
 	// MARK: Errors
 
 	func testErrorsIncludeTheSourceFile() {
@@ -36,12 +35,12 @@ final class ResultTests: XCTestCase {
 	}
 
 	// MARK: Try - Catch
-	
+
 	func testTryCatchProducesSuccesses() {
 		let result: Result<String, AnyError> = Result(try tryIsSuccess("success"))
 		XCTAssert(result == success)
 	}
-	
+
 	func testTryCatchProducesFailures() {
 		let result: Result<String, AnyError> = Result(try tryIsSuccess(nil))
 		XCTAssert(result.error == error)
@@ -189,7 +188,6 @@ final class NoErrorTests: XCTestCase {
 	}
 }
 
-
 // MARK: - Fixtures
 
 private enum Error: Swift.Error {
@@ -201,7 +199,6 @@ let error = AnyError(Error.a)
 let error2 = AnyError(Error.b)
 let failure = Result<String, AnyError>.failure(error)
 let failure2 = Result<String, AnyError>.failure(error2)
-
 
 // MARK: - Helpers
 
@@ -237,7 +234,7 @@ extension NSError {
 	var function: String? {
 		return userInfo[Result<(), NSError>.functionKey] as? String
 	}
-	
+
 	var file: String? {
 		return userInfo[Result<(), NSError>.fileKey] as? String
 	}

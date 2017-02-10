@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 
 public func loadSampleUserRepositories() -> JSON {
-    do{
+    do {
         let bundle = Bundle(for: ApiSpec.self)
         let path = bundle.path(forResource: "userRepositories_Sample", ofType: "json")!
         let jsonData = try! Data(contentsOf: URL(fileURLWithPath:path))

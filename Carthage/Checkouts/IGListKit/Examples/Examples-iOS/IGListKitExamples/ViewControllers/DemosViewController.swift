@@ -52,7 +52,7 @@ final class DemosViewController: UIViewController, IGListAdapterDataSource {
         collectionView.frame = view.bounds
     }
 
-    //MARK: IGListAdapterDataSource
+    // MARK: IGListAdapterDataSource
 
     func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
         return demos

@@ -78,8 +78,7 @@ extension Dictionary where Key: Random, Value: Random {
     public init(randomCount: Int, using randomGenerator: RandomGenerator = .default) {
         self.init(randomCount,
                   Key.randomSequence(maxCount: randomCount, using: randomGenerator),
-                  Value.randomSequence(maxCount: randomCount, using: randomGenerator),
-                  { Key.random(using: randomGenerator) })
+                  Value.randomSequence(maxCount: randomCount, using: randomGenerator), { Key.random(using: randomGenerator) })
     }
 
 }
@@ -95,8 +94,7 @@ extension Dictionary where Key: RandomWithinClosedRange, Value: RandomWithinClos
                 using randomGenerator: RandomGenerator = .default) {
         self.init(randomCount,
                   Key.randomSequence(within: keyRange, maxCount: randomCount, using: randomGenerator),
-                  Value.randomSequence(within: valueRange, maxCount: randomCount, using: randomGenerator),
-                  { Key.random(within: keyRange, using: randomGenerator) })
+                  Value.randomSequence(within: valueRange, maxCount: randomCount, using: randomGenerator), { Key.random(within: keyRange, using: randomGenerator) })
     }
 
 }

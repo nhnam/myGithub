@@ -1,4 +1,3 @@
-
 //  ChameleonShorthand.swift
 
 /*
@@ -106,7 +105,7 @@ Generates and creates an array of 5 color objects in the HSB colorspace from the
 
 - returns: An array of 5 color objects in the HSB colorspace.
 */
-public func ColorSchemeOf(_ colorSchemeType:ColorScheme, color:UIColor, isFlatScheme:Bool) -> [UIColor] {
+public func ColorSchemeOf(_ colorSchemeType: ColorScheme, color: UIColor, isFlatScheme: Bool) -> [UIColor] {
     return NSArray(ofColorsWith: colorSchemeType, using: color, withFlatScheme: isFlatScheme) as! [UIColor]
 }
 
@@ -122,4 +121,3 @@ public func ColorsFromImage(_ image: UIImage, withFlatScheme: Bool) -> [UIColor]
     // TODO: Remove forced casting
     return NSArray(ofColorsFrom: image, withFlatScheme: withFlatScheme) as! [UIColor]
 }
-

@@ -15,7 +15,7 @@
 import UIKit
 
 final class UserHeaderView: UICollectionViewCell {
-    
+
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var handleLabel: UILabel!
 

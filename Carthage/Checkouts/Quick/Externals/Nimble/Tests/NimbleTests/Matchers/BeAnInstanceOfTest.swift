@@ -35,7 +35,7 @@ final class BeAnInstanceOfTest: XCTestCase, XCTestCaseProvider {
             expect(NSNumber(value:1)).toNot(beAnInstanceOf(NSNumber.self))
         }
     }
-    
+
     func testSwiftTypesFailureMessages() {
         enum TestEnum {
             case one, two
@@ -54,5 +54,5 @@ final class BeAnInstanceOfTest: XCTestCase, XCTestCaseProvider {
             expect(TestEnum.one).to(beAnInstanceOf(TestEnum.self))
         }
     }
-    
+
 }

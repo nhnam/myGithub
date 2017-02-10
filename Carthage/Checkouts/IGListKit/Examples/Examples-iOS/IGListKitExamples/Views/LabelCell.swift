@@ -51,7 +51,7 @@ class LabelCell: UICollectionViewCell {
         contentView.layer.addSublayer(separator)
         contentView.backgroundColor = .white
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -70,5 +70,5 @@ class LabelCell: UICollectionViewCell {
             contentView.backgroundColor = UIColor(white: isHighlighted ? 0.9 : 1, alpha: 1)
         }
     }
-    
+
 }

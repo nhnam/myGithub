@@ -7,11 +7,11 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         progressView.frame = CGRect(origin: .zero, size: CGSize(width: 0, height: 2))
         progressView.backgroundColor = .blue
         navigationController?.navigationBar.addSubview(progressView)
-        
+
         downloadRepositories("ashfurrow")
     }
 
@@ -21,7 +21,7 @@ class ViewController: UITableViewController {
         alertController.addAction(ok)
         present(alertController, animated: true, completion: nil)
     }
-    
+
     // MARK: - API Stuff
 
     func downloadRepositories(_ username: String) {
@@ -55,11 +55,11 @@ class ViewController: UITableViewController {
                 let jsonString = try? response.mapString()
                 message = jsonString ?? message
             }
-    
+
             self.showAlert("Zen", message: message)
         }
     }
-    
+
     func uploadGiphy() {
         let data = animatedBirdData()
          GiphyProvider.request(.upload(gif: data),
@@ -67,22 +67,22 @@ class ViewController: UITableViewController {
                                   progress: progressClosure,
                                   completion: progressCompletionClosure)
     }
-    
+
     func downloadMoyaLogo() {
          GitHubUserContentProvider.request(.downloadMoyaWebContent("logo_github.png"),
                                               queue: DispatchQueue.main,
                                               progress: progressClosure,
                                               completion: progressCompletionClosure)
     }
-    
+
     // MARK: - Progress Helpers
-    
+
     lazy var progressClosure: ProgressBlock = { response in
         UIView.animate(withDuration: 0.3) {
             self.progressView.frame.size.width = self.view.frame.size.width * CGFloat(response.progress)
         }
     }
-    
+
     lazy var progressCompletionClosure: Completion = { result in
         let color: UIColor
         switch result {
@@ -91,12 +91,12 @@ class ViewController: UITableViewController {
         case .failure:
             color = .red
         }
-        
+
         UIView.animate(withDuration: 0.3) {
             self.progressView.backgroundColor = color
             self.progressView.frame.size.width = self.view.frame.size.width
         }
-        
+
         UIView.animate(withDuration: 0.3, delay: 1, options: [],
             animations: {
                 self.progressView.alpha = 0
@@ -107,7 +107,7 @@ class ViewController: UITableViewController {
                 self.progressView.alpha = 1
             }
         )
-        
+
     }
 
     // MARK: - User Interaction
@@ -115,12 +115,12 @@ class ViewController: UITableViewController {
     @IBAction func giphyWasPressed(_ sender: UIBarButtonItem) {
         uploadGiphy()
     }
-    
+
     @IBAction func searchWasPressed(_ sender: UIBarButtonItem) {
         var usernameTextField: UITextField?
 
         let promptController = UIAlertController(title: "Username", message: nil, preferredStyle: .alert)
-        let ok = UIAlertAction(title: "OK", style: .default) { action in
+        let ok = UIAlertAction(title: "OK", style: .default) { _ in
             if let username = usernameTextField?.text {
                 self.downloadRepositories(username)
             }
@@ -139,7 +139,7 @@ class ViewController: UITableViewController {
     @IBAction func downloadWasPressed(_ sender: UIBarButtonItem) {
         downloadMoyaLogo()
     }
-    
+
     // MARK: - Table View
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

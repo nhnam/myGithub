@@ -28,9 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     var performanceView: GDPerformanceMonitor?
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+
     #if DEBUG
         GDPerformanceMonitor.sharedInstance.startMonitoring()
         GDPerformanceMonitor.sharedInstance.configure(configuration: { (textLabel) in
@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     #if DEBUG
         GDPerformanceMonitor.sharedInstance.stopMonitoring()
     #endif
-        
+
     }
 
 }

@@ -23,9 +23,9 @@
 import UIKit
 
 public class GDPerformanceMonitor: NSObject {
-    
+
     // MARK: Public Properties
-    
+
     /**
      GDPerformanceMonitorDelegate delegate.
      */
@@ -34,7 +34,7 @@ public class GDPerformanceMonitor: NSObject {
             self.performanceView?.performanceDelegate = self.delegate
         }
     }
-    
+
     /**
      Change it to hide or show application version from monitoring view. Default is false.
      */
@@ -43,7 +43,7 @@ public class GDPerformanceMonitor: NSObject {
             self.performanceView?.appVersionHidden = self.appVersionHidden
         }
     }
-    
+
     /**
      Change it to hide or show device iOS version from monitoring view. Default is false.
      */
@@ -52,55 +52,55 @@ public class GDPerformanceMonitor: NSObject {
             self.performanceView?.deviceVersionHidden = self.deviceVersionHidden
         }
     }
-    
+
     /**
      Instance of GDPerformanceMonitor as singleton.
      */
     public static let sharedInstance: GDPerformanceMonitor = GDPerformanceMonitor.init()
-    
+
     // MARK: Private Properties
-    
+
     private var performanceView: GDPerformanceView?
-    
+
     private var performanceViewPaused: Bool = false
-    
+
     private var performanceViewHidden: Bool = false
-    
+
     private var prefersStatusBarHidden: Bool = false
-    
+
     private var preferredStatusBarStyle: UIStatusBarStyle = UIStatusBarStyle.default
-    
+
     // MARK: Init Methods & Superclass Overriders
-    
+
     /**
      Creates and returns instance of GDPerformanceMonitor.
      */
     public override init() {
         super.init()
-        
+
         self.subscribeToNotifications()
     }
-    
+
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-    
+
     // MARK: Notifications & Observers
-    
+
     @objc private func applicationDidBecomeActive(notification: NSNotification) {
         if self.performanceViewPaused {
             return
         }
-        
+
         self.startOrResumeMonitoring()
     }
-    
+
     @objc private func applicationWillResignActive(notification: NSNotification) {
         self.performanceView?.pauseMonitoring()
     }
-    
+
     // MARK: Public Methods
-    
+
     /**
      Overrides prefersStatusBarHidden and preferredStatusBarStyle properties to return the desired status bar attributes.
      
@@ -109,51 +109,51 @@ public class GDPerformanceMonitor: NSObject {
     public func configureStatusBarAppearance(prefersStatusBarHidden: Bool, preferredStatusBarStyle: UIStatusBarStyle) {
         self.prefersStatusBarHidden = prefersStatusBarHidden
         self.preferredStatusBarStyle = preferredStatusBarStyle
-        
+
         self.checkAndApplyStatusBarAppearance(prefersStatusBarHidden: prefersStatusBarHidden, preferredStatusBarStyle: preferredStatusBarStyle)
     }
-    
+
     /**
      Starts or resumes performance monitoring, initialize monitoring view if not initialized and shows monitoring view. Use configuration block to change appearance as you like.
      */
     public func startMonitoring(configuration: (UILabel?) -> Void) {
         self.performanceViewPaused = false
         self.performanceViewHidden = false
-        
+
         self.startOrResumeMonitoring()
-        
+
         let textLabel = self.performanceView?.textLabel()
         configuration(textLabel)
     }
-    
+
     /**
      Starts or resumes performance monitoring, initialize monitoring view if not initialized and shows monitoring view.
      */
     public func startMonitoring() {
         self.performanceViewPaused = false
         self.performanceViewHidden = false
-        
+
         self.startOrResumeMonitoring()
     }
-    
+
     /**
      Pauses performance monitoring and hides monitoring view.
      */
     public func pauseMonitoring() {
         self.performanceViewPaused = true
-        
+
         self.performanceView?.pauseMonitoring()
     }
-    
+
     /**
      Hides monitoring view.
      */
     public func hideMonitoring() {
         self.performanceViewHidden = true
-        
+
         self.performanceView?.hideMonitoring()
     }
-    
+
     /**
      Stops and removes monitoring view. Call when you're done with performance monitoring.
      */
@@ -161,7 +161,7 @@ public class GDPerformanceMonitor: NSObject {
         self.performanceView?.stopMonitoring()
         self.performanceView = nil
     }
-    
+
     /**
      Use configuration block to change appearance as you like.
      */
@@ -169,34 +169,34 @@ public class GDPerformanceMonitor: NSObject {
         let textLabel = self.performanceView?.textLabel()
         configuration(textLabel)
     }
-    
+
     // MARK: Private Methods
     // MARK: Default Setups
-    
+
     private func subscribeToNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(GDPerformanceMonitor.applicationDidBecomeActive(notification:)), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(GDPerformanceMonitor.applicationWillResignActive(notification:)), name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
     }
-    
+
     // MARK: Monitoring
-    
+
     private func startOrResumeMonitoring() {
         if self.performanceView == nil {
             self.setupPerformanceView()
         } else {
             self.performanceView?.resumeMonitoring(shouldShowMonitoringView: !self.performanceViewHidden)
         }
-        
+
         if UIApplication.shared.applicationState == UIApplicationState.active {
             self.performanceView?.addMonitoringViewAboveStatusBar()
         }
     }
-    
+
     private func setupPerformanceView() {
         self.performanceView = GDPerformanceView.init()
         self.performanceView?.performanceDelegate = self.delegate
         self.checkAndApplyStatusBarAppearance(prefersStatusBarHidden: self.prefersStatusBarHidden, preferredStatusBarStyle: self.preferredStatusBarStyle)
-        
+
         if (self.performanceViewPaused) {
             self.performanceView?.pauseMonitoring()
         }
@@ -204,16 +204,16 @@ public class GDPerformanceMonitor: NSObject {
             self.performanceView?.hideMonitoring()
         }
     }
-    
+
     // MARK: Other Methods
-    
+
     private func checkAndApplyStatusBarAppearance(prefersStatusBarHidden: Bool, preferredStatusBarStyle: UIStatusBarStyle) {
         if (self.performanceView?.prefersStatusBarHidden != prefersStatusBarHidden || self.performanceView?.preferredStatusBarStyle != preferredStatusBarStyle) {
             self.performanceView?.prefersStatusBarHidden = prefersStatusBarHidden
             self.performanceView?.preferredStatusBarStyle = preferredStatusBarStyle
-            
+
             self.performanceView?.configureRootViewController()
         }
     }
-    
+
 }

@@ -13,7 +13,7 @@ import SwiftyJSON
 import RandomKit
 import Chameleon
 
-class ApiSpec:QuickSpec {
+class ApiSpec: QuickSpec {
     override func spec() {
         describe("ApiProvider") {
             it("should has ApiProvider when app get started") {
@@ -28,7 +28,7 @@ class ApiSpec:QuickSpec {
                                 let json =  try response.mapJSON() as? Array<Any>
                                 expect(json?.count).to(equal(30))
                             } catch {
-                                
+
                             }
                             break
                         case .failure(_):
@@ -51,7 +51,7 @@ class ApiSpec:QuickSpec {
         }
         describe("Repositories ViewController") {
             let sut = ViewController()
-            
+
             it("should has title Nam's Github") {
                 let _ = sut.view
                 expect(sut.title).to(equal("Nam's Github"))
@@ -113,7 +113,7 @@ class ApiSpec:QuickSpec {
             }
             it("should has data after loadRepos") {
                 waitUntil(timeout: 5.0, action: { (done) in
-                    loader.loadRepos(username:"nhnam") { success in
+                    loader.loadRepos(username:"nhnam") { _ in
                         expect(loader.repositories.count).to(equal(30))
                         done()
                     }
@@ -121,22 +121,22 @@ class ApiSpec:QuickSpec {
             }
             it("should has data as a list of Repository after app started") {
                 waitUntil(timeout: 5.0, action: { (done) in
-                    loader.loadRepos(username:"nhnam") { success in
+                    loader.loadRepos(username:"nhnam") { _ in
                         done()
                     }
                 })
-                let arrRepos = loader.repositories.filter({ (element:Repository) -> Bool in
+                let arrRepos = loader.repositories.filter({ (element: Repository) -> Bool in
                     return(element is Repository)
                 })
                 expect(arrRepos.count).to(equal(loader.repositories.count))
             }
             it("should has data as a list of Repository with name, url") {
                 waitUntil(timeout: 5.0, action: { (done) in
-                    loader.loadRepos(username:"nhnam") { success in
+                    loader.loadRepos(username:"nhnam") { _ in
                         done()
                     }
                 })
-                let arrRepos = loader.repositories.filter({ (element:Repository) -> Bool in
+                let arrRepos = loader.repositories.filter({ (element: Repository) -> Bool in
                     return(element.name != nil && element.url != nil)
                 })
                 expect(arrRepos.count).to(equal(loader.repositories.count))
@@ -154,7 +154,7 @@ class ApiSpec:QuickSpec {
         }
         describe("Repository") {
             let reposJson = loadSampleUserRepositories()
-            it("should has 30 items"){
+            it("should has 30 items") {
                 expect(reposJson.count).to(equal(30))
             }
             it("should has first Repository") {
@@ -173,7 +173,7 @@ class ApiSpec:QuickSpec {
                                       stars: first["stargazers_count"].int!)
                 expect(repo.name).to(equal("myGithub"))
             }
-            it("should be equal if 2 repo has the same name"){
+            it("should be equal if 2 repo has the same name") {
                 let repoA = Repository(name: "Repo_ABC",
                                        url: "http://github.com",
                                       language: "Swift",
@@ -184,7 +184,7 @@ class ApiSpec:QuickSpec {
                                        stars: 2)
                 expect(repoA.isEqual(toDiffableObject: repoB)).to(beTrue())
             }
-            it("shouldnotbe equal if 1 of 2 is not a repo"){
+            it("shouldnotbe equal if 1 of 2 is not a repo") {
                 let repoA = Repository(name: "Repo_ABC",
                                        url: "http://github.com",
                                        language: "Swift",

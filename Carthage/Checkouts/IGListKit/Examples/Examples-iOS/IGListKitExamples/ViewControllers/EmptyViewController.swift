@@ -63,7 +63,7 @@ final class EmptyViewController: UIViewController, IGListAdapterDataSource, Remo
         adapter.performUpdates(animated: true, completion: nil)
     }
 
-    //MARK: IGListAdapterDataSource
+    // MARK: IGListAdapterDataSource
 
     func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
         return data as [IGListDiffable]
@@ -79,7 +79,7 @@ final class EmptyViewController: UIViewController, IGListAdapterDataSource, Remo
         return emptyLabel
     }
 
-    //MARK: RemoveSectionControllerDelegate
+    // MARK: RemoveSectionControllerDelegate
 
     func removeSectionControllerWantsRemoved(_ sectionController: RemoveSectionController) {
         let section = adapter.section(for: sectionController)

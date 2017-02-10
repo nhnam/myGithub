@@ -49,7 +49,7 @@ final class RemoveSectionController: IGListSectionController, IGListSectionType,
 
     func didSelectItem(at index: Int) {}
 
-    //MARK: RemoveCellDelegate
+    // MARK: RemoveCellDelegate
 
     func removeCellDidTapButton(_ cell: RemoveCell) {
         delegate?.removeSectionControllerWantsRemoved(self)

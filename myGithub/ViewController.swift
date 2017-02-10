@@ -15,29 +15,29 @@ class ViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
+
     let loader = RepositoriesLoader()
     let collectionView: IGListCollectionView = {
        let view = IGListCollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         return view
     }()
-    
+
     lazy var adapter: IGListAdapter = {
        return IGListAdapter(updater: IGListAdapterUpdater(), viewController: self, workingRangeSize: 1)
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Nam's Github"
-        
+
         view.addSubview(collectionView)
         adapter.collectionView = collectionView
         adapter.dataSource = self
-        loader.loadRepos(username:"nhnam") { [weak self] success in
-            self?.adapter.reloadData{ (done) in }
+        loader.loadRepos(username:"nhnam") { [weak self] _ in
+            self?.adapter.reloadData { (_) in }
         }
     }
-    
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.frame = view.bounds
@@ -48,13 +48,12 @@ extension ViewController: IGListAdapterDataSource {
     func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
         return loader.repositories
     }
-    
+
     func emptyView(for listAdapter: IGListAdapter) -> UIView? {
         return EmptyView()
     }
-    
+
     func listAdapter(_ listAdapter: IGListAdapter, sectionControllerFor object: Any) -> IGListSectionController {
         return RepoSectionController()
     }
 }
-

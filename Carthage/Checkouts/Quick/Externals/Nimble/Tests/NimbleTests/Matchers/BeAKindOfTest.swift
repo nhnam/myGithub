@@ -3,7 +3,7 @@ import Nimble
 
 #if _runtime(_ObjC)
 
-class TestNull : NSNull {}
+class TestNull: NSNull {}
 
 final class BeAKindOfTest: XCTestCase, XCTestCaseProvider {
     static var allTests: [(String, (BeAKindOfTest) -> () throws -> Void)] {
@@ -34,7 +34,7 @@ final class BeAKindOfTest: XCTestCase, XCTestCaseProvider {
             expect(NSNumber(value:1)).toNot(beAKindOf(NSNumber.self))
         }
     }
-    
+
     func testSwiftTypesFailureMessages() {
         enum TestEnum {
             case one, two

@@ -44,7 +44,7 @@ final class WorkingRangeViewController: UIViewController, IGListAdapterDataSourc
         collectionView.frame = view.bounds
     }
 
-    //MARK: IGListAdapterDataSource
+    // MARK: IGListAdapterDataSource
 
     func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
         return data as [IGListDiffable]

@@ -11,7 +11,7 @@ import UIKit
 class RepositoryCell: UICollectionViewCell {
     static let topInset = UIEdgeInsets(top: 0, left: 20, bottom: 20, right: 15)
     static let bottomInset = UIEdgeInsets(top: 20, left: 25, bottom: 0, right: 15)
-    
+
     let nameLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = UIColor.clear
@@ -28,23 +28,23 @@ class RepositoryCell: UICollectionViewCell {
         label.font = UIFont.italicSystemFont(ofSize: 14)
         return label
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(nameLabel)
         contentView.addSubview(linkLabel)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         nameLabel.frame = UIEdgeInsetsInsetRect(bounds, RepositoryCell.topInset)
         linkLabel.frame = UIEdgeInsetsInsetRect(bounds, RepositoryCell.bottomInset)
     }
-    
+
     func config(repository repositoryObject: Repository) {
         self.nameLabel.text = "\(repositoryObject.name) \(repositoryObject.stars) ⭐️"
         self.linkLabel.text = repositoryObject.url

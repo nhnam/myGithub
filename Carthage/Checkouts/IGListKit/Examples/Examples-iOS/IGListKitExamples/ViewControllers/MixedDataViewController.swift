@@ -48,7 +48,7 @@ final class MixedDataViewController: UIViewController, IGListAdapterDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let control = UISegmentedControl(items: segments.map { return $0.0 } )
+        let control = UISegmentedControl(items: segments.map { return $0.0 })
         control.selectedSegmentIndex = 0
         control.addTarget(self, action: #selector(MixedDataViewController.onControl(_:)), for: .valueChanged)
         navigationItem.titleView = control
@@ -68,7 +68,7 @@ final class MixedDataViewController: UIViewController, IGListAdapterDataSource {
         adapter.performUpdates(animated: true, completion: nil)
     }
 
-    //MARK: IGListAdapterDataSource
+    // MARK: IGListAdapterDataSource
 
     func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
         guard selectedClass != nil else {

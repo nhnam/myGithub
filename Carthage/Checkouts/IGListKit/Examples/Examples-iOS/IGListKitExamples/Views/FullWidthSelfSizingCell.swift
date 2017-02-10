@@ -51,5 +51,5 @@ final class FullWidthSelfSizingCell: UICollectionViewCell {
         layoutAttributes.frame = newFrame
         return layoutAttributes
     }
-    
+
 }

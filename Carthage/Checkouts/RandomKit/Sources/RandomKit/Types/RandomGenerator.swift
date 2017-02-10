@@ -72,7 +72,7 @@ public enum RandomGenerator {
     case mersenneTwister(threadSafe: Bool)
 
     /// Use custom generator.
-    case custom(randomize: (UnsafeMutableRawPointer, Int) -> ())
+    case custom(randomize: (UnsafeMutableRawPointer, Int) -> Void)
 
     /// The default random generator. Initially `xoroshiro(threadSafe: true)`.
     public static var `default` = xoroshiro(threadSafe: true)
@@ -326,12 +326,12 @@ private struct _MersenneTwister {
                 }
             }
             index = index &+ 1
-            
+
             result ^= (result >> 29) & 0x5555555555555555
             result ^= (result << 17) & 0x71D67FFFEDA60000
             result ^= (result << 37) & 0xFFF7EEE000000000
             result ^= result >> 43
-            
+
             return result
         }
     }
@@ -364,7 +364,7 @@ private extension UnsafeMutableRawPointer {
 
 #if os(Linux) || os(Android) || os(Windows)
 
-private typealias _Arc4random_buf = @convention(c) (ImplicitlyUnwrappedOptional<UnsafeMutableRawPointer>, Int) -> ()
+private typealias _Arc4random_buf = @convention(c) (ImplicitlyUnwrappedOptional<UnsafeMutableRawPointer>, Int) -> Void
 
 private let _a4r_buf: _Arc4random_buf? = {
     guard let handle = dlopen(nil, RTLD_NOW) else {

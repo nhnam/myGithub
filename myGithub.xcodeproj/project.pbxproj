@@ -25,6 +25,7 @@
 		D84877501E3E189600361E60 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D848774F1E3E189600361E60 /* SwiftyJSON.framework */; };
 		D86BBAA41E3F1FF100561BDE /* userRepositories_Sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D86BBAA31E3F1FF100561BDE /* userRepositories_Sample.json */; };
 		D86BBAA61E3F214500561BDE /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86BBAA51E3F214500561BDE /* TestHelper.swift */; };
+		D88D20A91E49B15F00A49642 /* UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D20A81E49B15F00A49642 /* UITest.swift */; };
 		D8ABD8571E45D24B008B577E /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8ABD8561E45D24B008B577E /* Chameleon.framework */; };
 		D8ABD8581E45D4EE008B577E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E819FD1E3B63DB0098EC6B /* Main.storyboard */; };
 		D8C50C9E1E45DE840059A592 /* ExtTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C50C9D1E45DE840059A592 /* ExtTest.swift */; };
@@ -87,6 +88,8 @@
 		D848774F1E3E189600361E60 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		D86BBAA31E3F1FF100561BDE /* userRepositories_Sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = userRepositories_Sample.json; sourceTree = "<group>"; };
 		D86BBAA51E3F214500561BDE /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		D88D20A61E49B0BC00A49642 /* XCTest_Gherkin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest_Gherkin.framework; path = Carthage/Build/iOS/XCTest_Gherkin.framework; sourceTree = "<group>"; };
+		D88D20A81E49B15F00A49642 /* UITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITest.swift; sourceTree = "<group>"; };
 		D8ABD8561E45D24B008B577E /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
 		D8C50C9D1E45DE840059A592 /* ExtTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtTest.swift; sourceTree = "<group>"; };
 		D8D1B36E1E3EE062003329D2 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
@@ -150,6 +153,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D88D20AB1E4AC9DB00A49642 /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Carthage;
+			sourceTree = "<group>";
+		};
 		D8E819ED1E3B63DB0098EC6B = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +202,8 @@
 		D8E81A0E1E3B6E700098EC6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D88D20AB1E4AC9DB00A49642 /* Carthage */,
+				D88D20A61E49B0BC00A49642 /* XCTest_Gherkin.framework */,
 				D8ABD8561E45D24B008B577E /* Chameleon.framework */,
 				D829BE721E3F9EA200FB52F6 /* RandomKit.framework */,
 				D829BE731E3F9EA200FB52F6 /* ShiftOperations.framework */,
@@ -222,6 +234,7 @@
 				D8E81A1B1E3B91FE0098EC6B /* Info.plist */,
 				D86BBAA51E3F214500561BDE /* TestHelper.swift */,
 				D8C50C9D1E45DE840059A592 /* ExtTest.swift */,
+				D88D20A81E49B15F00A49642 /* UITest.swift */,
 			);
 			path = myGithubTests;
 			sourceTree = "<group>";
@@ -412,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D815660A1E3BD03900832FCF /* ViewController.swift in Sources */,
+				D88D20A91E49B15F00A49642 /* UITest.swift in Sources */,
 				D81566091E3BC9C800832FCF /* RepositoryCell.swift in Sources */,
 				D8E81A851E3B9C560098EC6B /* Api.swift in Sources */,
 				D81566061E3BC65E00832FCF /* RepoSectionController.swift in Sources */,

@@ -44,8 +44,7 @@ extension Set where Element: Random {
     /// Construct a Set of random elements.
     public init(randomCount: Int, using randomGenerator: RandomGenerator = .default) {
         self.init(randomCount,
-                  Element.randomSequence(maxCount: randomCount, using: randomGenerator),
-                  { Element.random(using: randomGenerator) })
+                  Element.randomSequence(maxCount: randomCount, using: randomGenerator), { Element.random(using: randomGenerator) })
     }
 
 }
@@ -59,8 +58,7 @@ extension Set where Element: RandomWithinClosedRange {
                 within closedRange: ClosedRange<Element>,
                 using randomGenerator: RandomGenerator = .default) {
         self.init(randomCount,
-                  Element.randomSequence(within: closedRange, maxCount: randomCount, using: randomGenerator),
-                  { Element.random(within: closedRange, using: randomGenerator) })
+                  Element.randomSequence(within: closedRange, maxCount: randomCount, using: randomGenerator), { Element.random(within: closedRange, using: randomGenerator) })
     }
 
 }

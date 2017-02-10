@@ -33,7 +33,7 @@ enum Api {
     case userRepositories(String)
 }
 
-extension Api: TargetType{
+extension Api: TargetType {
     var baseURL: URL { return URL(string:"https://api.github.com")! }
     var path: String {
         switch self {
@@ -49,7 +49,7 @@ extension Api: TargetType{
     var parameters: [String : Any]? {
         switch self {
         case .userRepositories:
-            return ["sort":"pushed"]
+            return ["sort": "pushed"]
         default:
             return nil
         }

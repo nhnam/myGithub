@@ -55,4 +55,3 @@ extension NSNumber: Random {
     }
 
 }
-

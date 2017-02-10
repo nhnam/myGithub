@@ -47,7 +47,7 @@ final class HorizontalSectionController: IGListSectionController, IGListSectionT
 
     func didSelectItem(at index: Int) {}
 
-    //MARK: IGListAdapterDataSource
+    // MARK: IGListAdapterDataSource
 
     func objects(for listAdapter: IGListAdapter) -> [IGListDiffable] {
         guard let number = number else { return [] }

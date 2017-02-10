@@ -44,7 +44,7 @@ final class SearchSectionController: IGListSectionController, IGListSectionType,
     func didUpdate(to object: Any) {}
     func didSelectItem(at index: Int) {}
 
-    //MARK: UISearchBarDelegate
+    // MARK: UISearchBarDelegate
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         delegate?.searchSectionController(self, didChangeText: searchText)
@@ -54,7 +54,7 @@ final class SearchSectionController: IGListSectionController, IGListSectionType,
         delegate?.searchSectionController(self, didChangeText: "")
     }
 
-    //MARK: IGListScrollDelegate
+    // MARK: IGListScrollDelegate
 
     func listAdapter(_ listAdapter: IGListAdapter, didScroll sectionController: IGListSectionController) {
         if let searchBar = (collectionContext?.cellForItem(at: 0, sectionController: self) as? SearchCell)?.searchBar {

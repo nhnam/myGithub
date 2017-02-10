@@ -46,8 +46,8 @@ extension CGRect: Random {
     /// - parameter heightRange: The range within which `height` will be generated.
     /// - parameter randomGenerator: The random generator to use.
     public static func random(within xRange: ClosedRange<CGFloat>,
-                              _ yRange:      ClosedRange<CGFloat>,
-                              _ widthRange:  ClosedRange<CGFloat>,
+                              _ yRange: ClosedRange<CGFloat>,
+                              _ widthRange: ClosedRange<CGFloat>,
                               _ heightRange: ClosedRange<CGFloat>,
                               using randomGenerator: RandomGenerator = .default) -> CGRect {
         return CGRect(origin: .random(within: xRange, yRange), size: .random(within: widthRange, heightRange))
