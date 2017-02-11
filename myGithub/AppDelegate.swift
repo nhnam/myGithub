@@ -11,9 +11,19 @@ import Fabric
 import Crashlytics
 import GDPerformanceView
 import Chameleon
+import ReSwift
+
+struct AppState: StateType {
+    var counter: Int = 0
+}
+
+let mainStore = Store<AppState>(
+    reducer: CounterReducer(),
+    state: nil
+)
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 

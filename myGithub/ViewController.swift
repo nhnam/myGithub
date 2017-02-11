@@ -9,8 +9,10 @@
 import UIKit
 import Moya
 import IGListKit
+import ReSwift
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, StoreSubscriber {
+    typealias StoreSubscriberStateType = AppState
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -28,6 +30,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // subscribe to state changes
+        mainStore.subscribe(self)
+        
         self.title = "Nam's Github"
 
         view.addSubview(collectionView)
@@ -37,10 +42,19 @@ class ViewController: UIViewController {
             self?.adapter.reloadData { (_) in }
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        mainStore.dispatch( CounterActionIncrease() )
+    }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         collectionView.frame = view.bounds
+    }
+    
+    func newState(state: AppState) {
+        print("App changed: \(state.counter)")
     }
 }
 

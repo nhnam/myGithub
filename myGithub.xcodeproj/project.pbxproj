@@ -26,6 +26,8 @@
 		D86BBAA41E3F1FF100561BDE /* userRepositories_Sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D86BBAA31E3F1FF100561BDE /* userRepositories_Sample.json */; };
 		D86BBAA61E3F214500561BDE /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86BBAA51E3F214500561BDE /* TestHelper.swift */; };
 		D88D20A91E49B15F00A49642 /* UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88D20A81E49B15F00A49642 /* UITest.swift */; };
+		D8A69DEB1E4EEF8A008484D1 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A69DEA1E4EEF8A008484D1 /* ReSwift.framework */; };
+		D8A69DED1E4EF065008484D1 /* CounterReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A69DEC1E4EF065008484D1 /* CounterReducer.swift */; };
 		D8ABD8571E45D24B008B577E /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8ABD8561E45D24B008B577E /* Chameleon.framework */; };
 		D8ABD8581E45D4EE008B577E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8E819FD1E3B63DB0098EC6B /* Main.storyboard */; };
 		D8C50C9E1E45DE840059A592 /* ExtTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C50C9D1E45DE840059A592 /* ExtTest.swift */; };
@@ -90,6 +92,8 @@
 		D86BBAA51E3F214500561BDE /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 		D88D20A61E49B0BC00A49642 /* XCTest_Gherkin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest_Gherkin.framework; path = Carthage/Build/iOS/XCTest_Gherkin.framework; sourceTree = "<group>"; };
 		D88D20A81E49B15F00A49642 /* UITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITest.swift; sourceTree = "<group>"; };
+		D8A69DEA1E4EEF8A008484D1 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
+		D8A69DEC1E4EF065008484D1 /* CounterReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterReducer.swift; sourceTree = "<group>"; };
 		D8ABD8561E45D24B008B577E /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
 		D8C50C9D1E45DE840059A592 /* ExtTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtTest.swift; sourceTree = "<group>"; };
 		D8D1B36E1E3EE062003329D2 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8A69DEB1E4EEF8A008484D1 /* ReSwift.framework in Frameworks */,
 				D8ABD8571E45D24B008B577E /* Chameleon.framework in Frameworks */,
 				D8D1B3821E3EE19E003329D2 /* SystemConfiguration.framework in Frameworks */,
 				D8D1B3801E3EE199003329D2 /* QuartzCore.framework in Frameworks */,
@@ -195,6 +200,7 @@
 				D81566101E3C58FA00832FCF /* FastViewController.swift */,
 				D83A92EE1E3C5D3500592A19 /* EmptyView.swift */,
 				D8D1B3701E3EE12C003329D2 /* myGithub-Bridging-Header.h */,
+				D8A69DEC1E4EF065008484D1 /* CounterReducer.swift */,
 			);
 			path = myGithub;
 			sourceTree = "<group>";
@@ -202,6 +208,7 @@
 		D8E81A0E1E3B6E700098EC6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8A69DEA1E4EEF8A008484D1 /* ReSwift.framework */,
 				D88D20AB1E4AC9DB00A49642 /* Carthage */,
 				D88D20A61E49B0BC00A49642 /* XCTest_Gherkin.framework */,
 				D8ABD8561E45D24B008B577E /* Chameleon.framework */,
@@ -394,6 +401,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/GDPerformanceView.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Chameleon.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReSwift.framework",
 			);
 			name = "Carthage Build Script";
 			outputPaths = (
@@ -413,6 +421,7 @@
 				D81566051E3BC65E00832FCF /* RepoSectionController.swift in Sources */,
 				D8E819FC1E3B63DB0098EC6B /* ViewController.swift in Sources */,
 				D81566081E3BC9C800832FCF /* RepositoryCell.swift in Sources */,
+				D8A69DED1E4EF065008484D1 /* CounterReducer.swift in Sources */,
 				D83A92EF1E3C5D3500592A19 /* EmptyView.swift in Sources */,
 				D81566111E3C58FA00832FCF /* FastViewController.swift in Sources */,
 				D8E81AAC1E3BBD590098EC6B /* RepositoriesLoader.swift in Sources */,
